@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+</head>
+<script type="text/javascript">
+
+window.onload = function() {
+	/*
+	if(clickNode.addEventListener){
+		clickNode.addEventListener('click', handleClick, false);
+	} else {
+		clickNode.addEventListener('onclick', handleClick);
+	}
+*/
+	function handleClick(e) {
+		var node = document.getElementById('handle');
+		alert('wow');
+	}
+
+	var a = document.getElementById('a');
+	var b = document.getElementById('b');
+	//
+	if(a.addEventListener) {
+		a.addEventListener('click', function(){alert('a')});
+		b.addEventListener('click', function(event){
+			// event.stoppropagation();
+			event.preventDefault();
+			alert('b');
+		});
+	}
+
+}
+
+</script>
+<style type="text/css">
+	#a {
+		width: 10px;,
+		height: 10px;
+	},
+	#b {
+		width: 20px;,
+		height: 20px;
+	}
+
+</style>
+<body>
+
+<!-- 
+<p id="sports" class="abc_class" data-attr="html5-data attribute">getAttribute(name)</p>
+ -->
+
+<div id="sports" class="yellowClass">클릭하면 appendChild()</div>
+<div id="after">기준 페어런트 엘리먼트</div>
+
+<div id="a">aa
+	<div id="b">bb</div>
+</div>
+
+</body>	
+</html>

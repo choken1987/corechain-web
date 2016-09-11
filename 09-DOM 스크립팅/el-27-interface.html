@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+</head>
+<script type="text/javascript">
+
+window.onload = function () {
+
+	var baseNode = document.getElementById('standard');
+	var content = '<span>test</span>';
+	var count = 0;
+	var getCount = function () {
+		return count++;
+	}
+
+	//
+	baseNode.insertAdjacentHTML('beforebegin', getCount());
+
+	baseNode.insertAdjacentHTML('afterend', getCount());
+
+	baseNode.insertAdjacentHTML('afterbegin', getCount());
+
+	baseNode.insertAdjacentHTML('beforeend', getCount());
+
+	//
+	var el1 = document.createElement('div');
+		el1.textContent = 'afterbegin';
+	baseNode.insertBefore(el1, baseNode.firstChild);
+
+	var el2 = document.createElement('div');
+		el2.textContent = 'beforeend';
+	baseNode.appendChild(el2);
+
+	//
+	debugger;
+	baseNode.parentNode.insertBefore(el1, baseNode);
+
+	baseNode.parentNode.insertBefore(el2, baseNode.nextSibling);
+
+	//
+	debugger;
+	var baseNode = document.getElementById('baseNode');
+	var clickNode = document.getElementById('clickNode');
+	clickNode.addEventListener('click', function () {
+		//
+		var contetnt = '<div id=one>추가</div><div id=two>추가2</div>';
+		baseNode.insertAdjacentHTML('beforeend', content);
+	}, false);
+	var obj = new MutationObserver(callback);
+
+	var options = {childList: true};
+
+	obj.observe(baseNode, options);
+
+	function callback (records) {
+		records.forEach(function(record){
+			var addedNodes = record.addedNodes;
+			for(var k = 0; k < addedNodes.length; k++) {
+				js.log('id : ' + addedNodes[k].id + addedNodes[k].textContent);
+			}
+		})
+
+	}
+
+	function callback (records) {
+		records.forEach(function (record) {
+			var nodes = record.removedNodes;
+			for(var k = 0; k < nodes.length; k++) {
+
+			}
+		})
+	}
+
+	//
+	var node = document.getElementById('inputID');
+	node.focus();
+	node.addEventListener('compositionstart', function (event) {
+		js.log(event.data);
+	}, false);
+	node.addEventListener('compositionupdate', function (event) {
+		js.log(event.data);
+	}, false);
+	node.addEventListener('compositionend', function (event) {
+		js.log(event.data);
+	}, false);
+}
+
+</script>
+<body>
+
+<div>직전 엘리먼트</div><hr>
+<div id="standard">기준 엘리먼트</div><hr>
+<div>직후 엘리먼트</div><hr>
+
+<button id="clickNode">버튼</button>
+<div id="baseNode">--모니터링 기준 #baseNode--</div>
+
+<input type="text" id="inputID">
+
+</body>	
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+</head>
+<script type="text/javascript">
+
+window.onload = function() {
+	//
+	var el = document.getElementById('sports');
+
+	
+	//
+	js.log(el.getAttribute('data-attr'));
+	js.log(el.getAttribute('class'));
+
+	//
+	el.setAttribute('data-attr', 'changed');
+	js.log(el.getAttribute('data-attr'));
+
+	//
+	js.log(el.getAttribute('data-test'));	
+	el.setAttribute('data-test', 'maked');
+	js.log(el.getAttribute('data-test'));
+
+	//
+	var sportsNode = document.getElementById('sports');
+		sportsNode.addEventListener('click', clickSports, false);
+
+	function clickSports(){
+		var node = document.getElementById('after');
+			node.appendChild(document.createElement('div'));
+		js.log(node.firstElementChild.NodeName);
+
+		var el = document.getElementById('sports');
+		node.appendChild(el);
+		el.style.top = "30px";
+		el.style.left = "10px";
+
+		js.log(node.childElementCount);
+	}
+	//
+
+	/* removeChild */
+	var el = document.getElementById('sprots');
+	var remove = el.parentNode.removeChild(el); // parentNode로 selector
+	js.log(remove.id);
+
+	/* hasChildNodes */
+}
+
+</script>
+<body>
+
+<!-- 
+<p id="sports" class="abc_class" data-attr="html5-data attribute">getAttribute(name)</p>
+ -->
+
+<div id="sports" class="yellowClass">클릭하면 appendChild()</div>
+<div id="after">기준 페어런트 엘리먼트</div>
+
+</body>	
+</html>
