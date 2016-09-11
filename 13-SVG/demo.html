@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>SVG examples</title>
+  </head>
+  <body>
+
+    <!--  -->
+    <div class="">
+      <h6>line</h6>
+    </div>
+    <div class="">
+      <svg width=600 height=400>
+        <line x1="100" y1="100" x2="100" y2="200" stroke="red" />
+        <line x1="100" y1="200" x2="200" y2="200" stroke="green" />
+        <line x1="100" y1="100" x2="200" y2="200" stroke="blue" />
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>CSS Style</h6>
+    </div>
+    <style media="screen">
+      .styleClass {stroke: blue}
+    </style>
+    <div class="">
+      <svg width=600 height=400>
+        <line style="stroke:blue" x1="100" y1="100" x2="100" y2="200" stroke="red" />
+        <line class="styleClass" x1="100" y1="200" x2="200" y2="200" stroke="green" />
+        <line x1="100" y1="100" x2="200" y2="200" stroke="blue" />
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>stroke</h6>
+    </div>
+    <div class="">
+      <svg width=600 height=400>
+        <line x1="100" y1="10" x2="100" y2="10" stroke="blue" />
+        <line x1="100" y1="30" x2="200" y2="30" stroke="#0000FF" />
+        <line x1="100" y1="60" x2="200" y2="60" stroke="#00f" />
+        <line x1="100" y1="90" x2="200" y2="90" stroke="rbg(0, 0, 255)" />
+        <line x1="100" y1="120" x2="200" y2="120" stroke="rgb(0%, 0%, 100%)" stroke-width=5 />
+        <line x1="100" y1="150" x2="200" y2="150" stroke="rgba(0, 0, 255, 0.3)" />
+      </svg>
+    </div>``
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>stroke-width</h6>
+      <ul>
+        <li>선 좌표기준: stroke-width의 가운데가 좌표; 좌표를 기준으로 좌우상하로 표시</li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width=600 height=400>
+        <line x1="10" y1="150" x2="110" y2="150" stroke="red" stroke-width=40 />
+        <line x1="30" y1="150" x2="130" y2="150" stroke="blue" stroke-width=5 />
+
+        <line x1="30" y1="250" x2="130" y2="250" stroke="blue" stroke-width=5 stroke-dasharray="10, 5" />
+        <line x1="30" y1="250" x2="130" y2="250" stroke="blue" stroke-width=5 stroke-dasharray="10, 5, 20, 10" />
+
+        <line x1="30" y1="350" x2="130" y2="350" stroke="blue" stroke-width=5 stroke-linecap="butt" />
+        <line x1="30" y1="450" x2="130" y2="450" stroke="blue" stroke-width=5 stroke-linecap="round" />
+        <line x1="30" y1="550" x2="130" y2="550" stroke="blue" stroke-width=5 stroke-linecap="square" />
+
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>rect</h6>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width="120" height="120"
+      viewBox="0 0 120 120"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <rect x="10" y="10"
+      width="100" height="100"
+      rx="15" ry="15"/>
+
+      </svg>
+      <svg width="120" height="120"
+      viewPort="0 0 120 120" version="1.1"
+      xmlns="http://www.w3.org/2000/svg">
+
+        <polygon points="60,20 100,40 100,80 60,100 20,80 20,40" fill="red" fill-rule="evenodd" />
+
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>path</h6>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div class="">
+      <svg>
+        <path d="M100,160 L160,100 L220,160 z" fill="lime">
+        </path>
+      </svg>
+      <br>
+      <svg>
+        <path d="M100,100 L150,0 L250,0 L300,100 z" fill="lime" stroke="red" stroke-width="5">
+        </path>
+      </svg>
+      <svg>
+        <path d="m100,100 l50,-100 l100,0 l50,100 z" fill="green" stroke="red" stroke-width="5">
+        </path>
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>path</h6>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width=500 height=400>
+        <g fill="none" stroke-width="3">
+          <line x1=100 y1=100 x2=150 y2=100 stroke="red" />
+          <path d="M100,100 A50,50 0 1,0 150,100" stroke="blue" />
+          <path d="M100,300 A50,50 0 1,0 150,100" stroke="blue" />
+        </g>
+      </svg>
+      <br>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>path-arc-curve</h6>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width="12cm" height="5.25cm" viewBox="0 0 1200 400"
+           xmlns="http://www.w3.org/2000/svg" version="1.1">
+        <title>Example arcs01 - arc commands in path data</title>
+        <desc>Picture of a pie chart with two pie wedges and
+              a picture of a line with arc blips</desc>
+        <rect x="1" y="1" width="1198" height="398"
+              fill="none" stroke="blue" stroke-width="1" />
+
+        <path d="M300,200 h-150 a150,150 0 1,0 150,-150 z"
+              fill="red" stroke="blue" stroke-width="5" />
+        <path d="M275,175 v-150 a150,150 0 0,0 -150,150 z"
+              fill="yellow" stroke="blue" stroke-width="5" />
+
+        <path d="M600,350 l 50,-25
+                 a25,25 -30 0,1 50,-25 l 50,-25
+                 a25,50 -30 0,1 50,-25 l 50,-25
+                 a25,75 -30 0,1 50,-25 l 50,-25
+                 a25,100 -30 0,1 50,-25 l 50,-25"
+              fill="none" stroke="red" stroke-width="5"  />
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>text-font</h6>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width=500 height=400>
+        <text x=60 y=120 font-size=34>
+          SVG text 테슽흫
+        </text>
+
+      </svg>
+      <br>
+      <svg xmlns="http://www.w3.org/2000/svg" width="300" height="50">
+        <text x="10" y="20"
+              style="font-family: Times New Roman;
+                     font-size: 24;
+                     stroke: #00ff00;
+                     fill: #0000ff;"
+              rotate="0 180 0">
+          SVG text styling
+        </text>
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>marker</h6>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width="120" height="120" viewBox="0 0 120 120"
+           xmlns="http://www.w3.org/2000/svg" version="1.1"
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+
+          <defs>
+              <marker id="Triangle"
+                      viewBox="0 0 10 10"
+                      refX="1" refY="5"
+                      markerWidth="6"
+                      markerHeight="6"
+                      orient="auto">
+                  <path d="M 0 0 L 10 5 L 0 10 z" />
+      	    </marker>
+          </defs>
+
+          <polyline points="10,90 50,80 90,20"
+                    fill="none" stroke="black"
+                    stroke-width="2"
+                    marker-end="url(#Triangle)" />
+      </svg>
+      <br>
+      <svg>
+
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>image</h6>
+      <ul>
+        <li>xlink:href</li>
+        <li>preserveAspectRatio</li>
+        <li>xMaxYMax</li>
+        <li>meet / slice</li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width=450 height=450>
+        <!-- <image x=50 y=100 width=150 height=150 xlink:href:'C:\server\src\images\jimin.jpg'> -->
+        <!-- <image x=0 y=0 width=150 height=150 xlink:href='jimin.jpg'> -->
+        <image x=0 y=0 width=150 height=150 xlink:href='C:\server\src\images\jimin.jpg'>
+          <title>SVG 이미지</title>
+        </image>
+        <image x=150 y=150 width=150 height=150 xlink:href='C:\server\src\images\jimin.jpg'
+         preserveAspectRatio='xMidYMid slice'>
+          <title>SVG 이미지</title>
+        </image>
+        <image x=300 y=300 width=150 height=150 xlink:href='C:\server\src\images\jimin.jpg'
+         preserveAspectRatio='xMaxYMax slice'>
+          <title>SVG 이미지</title>
+        </image>
+      </svg>
+      <svg width="80%" height="80%" viewBox="0 0 100 100"
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+           <!-- <image xlink:href="/files/2917/fxlogo.png" x="0" y="0" height="100" width="100" /> -->
+        <image xlink:href="jimin.jpg" x="0" y="0" height="100" width="100" />
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>viewbox</h6>
+      <ul>
+        <li>viewbox</li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width="50%" height="50%" viewBox="0 0 200 200">
+      <!-- <svg width="50%" height="50%" viewBox="0 0 500 500"> -->
+      <!-- <svg width="50%" height="50%" viewBox="-50 -50 250 250"> -->
+        <rect x=0 y=0 width=200 height=200 fill=none stroke=red />
+        <circle cx=0 cy=0 r=50 fill="lime" />
+        <circle cx=200 cy=0 r=50 fill="red" />
+        <circle cx=100 cy=100 r=50 fill="blue" />
+        <circle cx=0 cy=200 r=50 fill="green" />
+        <circle cX=200 cy=200 r=50 fill="violet" />
+      </svg>
+      <br>
+      <button type="button" name="button" id="zoomin">zoomin</button>
+      <button type="button" name="button" id="zoomout">zoomout</button>
+    </div>
+    <script type="text/javascript">
+      document.onload = function() {
+      };
+      document.getElementById('zoomin').addEventListener('click', function() {
+        var svg = document.querySelector('body > div:nth-child(25) > svg');
+        var viewBox = svg.attributes[2].nodeValue;
+        var values = viewBox.split(' '); // [0, 0, 200, 200]
+        var rate = values[2] * 0.1; // 10% 축소
+        var valuesNew = [Number(values[0])+rate/2, Number(values[1])+rate/2, Number(values[2])-rate, Number(values[3])-rate];
+        // var valuesNew = values.forEach(function(element, index, array) {
+        //
+        // });
+
+        // viewBox = valuesNew.join(' ');
+        svg.attributes[2].nodeValue = valuesNew.join(' ');
+      });
+      document.getElementById('zoomout').addEventListener('click', function() {
+        var svg = document.querySelector('body > div:nth-child(25) > svg');
+        var viewBox = svg.attributes[2].nodeValue;
+        var values = viewBox.split(' '); // [0, 0, 200, 200]
+        var rate = values[2] * (-0.1); // 10% 확대
+        var valuesNew = [Number(values[0])+rate/2, Number(values[1])+rate/2, Number(values[2])-rate, Number(values[3])-rate];
+        // var valuesNew = values.forEach(function(element, index, array) {
+        //
+        // });
+
+        // viewBox = valuesNew.join(' ');
+        svg.attributes[2].nodeValue = valuesNew.join(' ');
+      });
+    </script>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>translate</h6>
+      <ul>
+        <li>matrix</li>
+        <li>translate</li>
+        <li>rotate</li>
+        <li>skew</li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width="180" height="200"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink">
+
+        <!-- This is the element before translation and rotation are applied -->
+        <rect x="50" y="50" height="100" width="100" style="stroke:#000; fill: #0086B2" fill-opacity=0.2 stroke-opacity=0.2></rect>
+
+        <!-- Now we add a text element and apply rotate and translate to both -->
+        <rect x="50" y="50" height="100" width="100" style="stroke:#000; fill: #0086B2" transform="translate(30) rotate(45 50 50)"></rect>
+        <text x="60" y="105" transform="translate(30) rotate(45 50 50)"> Hello Moz! </text>
+
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>gradient</h6>
+      <ul>
+        <li>x1 y1 x2 y2</li>
+        <li>stop</li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width="100%" height="120"  viewBox="0 0 120 120"
+           xmlns="http://www.w3.org/2000/svg" version="1.1"
+           xmlns:xlink="http://www.w3.org/1999/xlink" >
+
+          <defs>
+              <linearGradient id="MyGradient">
+                  <stop offset="0%" stop-color="red"/>
+                  <stop offset="25%" stop-color="green"/>
+                  <stop offset="80%" stop-color="gold"/>
+                  <stop offset="100%" stop-color="blue"/>
+              </linearGradient>
+          </defs>
+
+          <rect fill="url(#MyGradient)"
+                x="10" y="10" width="100%" height="12"/>
+      </svg>
+    </div>
+    <!--  -->
+
+    <!--  -->
+    <div class="">
+      <h6>mask</h6>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div class="">
+      <?xml version="1.0"?>
+      <svg width="200" height="80"
+           viewBox="0 0 200 80" version="1.1"
+           xmlns="http://www.w3.org/2000/svg"
+           xmlns:xlink="http://www.w3.org/1999/xlink">
+
+          <defs>
+              <mask id="myMask" maskUnits="userSpaceOnUse"
+                    x="0" y="0" width="200" height="80">
+                  <rect x="0" y="0" width="100" height="80" fill="white"/>
+              </mask>
+
+              <text id="Text" x="100" y="48"
+                    font-size="26" font-weight="bold" text-anchor="middle">
+                  Black & White
+              </text>
+          </defs>
+
+          <!-- Draw black rectangle in the background -->
+          <rect x="100" y="10" width="95" height="60"  />
+
+          <!-- Draw the text string twice. First, the white text without mask.
+               Second, the black text with the mask applied-->
+          <use xlink:href="#Text" fill="white"/>
+          <use xlink:href="#Text" fill="black" mask="url(#myMask)"/>
+      </svg>
+    </div>
+    <div class="">
+      <svg width=500 height=150>
+        <defs>
+          <mask id="id1">
+            <image x=0 y=0 width=150 height=150 xlink:href="jimin.jpg" />
+          </mask>
+          <mask id="id2">
+            <!-- <image x=0 y=200 width=150 height=150 xlink:href="jimin.jpg" /> -->
+            <image x=150 y=0 width=150 height=150 xlink:href="jimin.jpg" />
+          </mask>
+        </defs>
+        <rect x=0 y=0 width=150 height=150 fill="green" mask="url(#id1)"/>
+        <rect x=150 y=0 width=150 height=150 fill="black" mask="url(#id2)"/>
+      </svg>
+    </div>
+    <div class="">
+      <svg width=500 height=150>
+        <defs>
+          <filter id="id1" filterUnits="userSpaceOnUnse" x=0 y=0 width=150 height=300>
+            <feGaussianBlur in="SourceGraphic" stdDeviation=2 />
+          </filter>
+        </defs>
+      </svg>
+    </div>
+    <!--  -->
+
+
+
+
+
+
+
+
+
+    <!--  -->
+    <div class="">
+      <h6>animateMotion</h6>
+      <ul>
+        <li></li>
+      </ul>
+    </div>
+    <div class="">
+      <svg width="120" height="120"  viewBox="0 0 120 120"
+           xmlns="http://www.w3.org/2000/svg" version="1.1"
+           xmlns:xlink="http://www.w3.org/1999/xlink" >
+
+          <!-- Draw the outline of the motion path in grey, along
+               with 2 small circles at key points -->
+          <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+                stroke="lightgrey" stroke-width="2"
+                fill="none" id="theMotionPath"/>
+          <circle cx="10" cy="110" r="3" fill="lightgrey"  />
+
+          <!-- Here is a red circle which will be moved along the motion path. -->
+          <circle cx="" cy="" r="5" fill="red">
+
+              <!-- Define the motion path animation -->
+              <animateMotion dur="6s" repeatCount="indefinite">
+                 <mpath xlink:href="#theMotionPath"/>
+              </animateMotion>
+          </circle>
+      </svg>
+    </div>
+    <!--  -->
+
+
+  </body>
+</html>
