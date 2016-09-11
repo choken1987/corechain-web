@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- <script src="D:\Workspace\lib\js\d3\d3.js" charset="utf-8"></script> -->
+    <script src="d3.js" charset="utf-8"></script>
+    <!-- <script src="stackedBarDemo1.js" charset="utf-8"></script> -->
+    <script src="stackedBarDemo2.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      window.onload = function() {
+        object = createSVG();
+        defineData();
+        setBaseValue(object);
+        drawXaxis(object);
+        drawYaxis(object);
+        drawBar(object);
+      };
+    </script>
+  </head>
+  <body>
+
+    <!--  -->
+    <div class="helloD3">
+
+    </div>
+
+    <!--  -->
+    <div class="">
+      <em>em1</em>
+      <em>em2</em>
+      <em>em3</em>
+      <em>em4</em>
+      <em>em5</em>
+    </div>
+
+    <!--  -->
+    <style media="screen">
+      #idsvg {
+        width: 600px;
+        height: 400px
+      }
+      #d3 {
+        width: 670px;
+        height: 450px;
+        border: 1px solid blue;
+      }
+      .bar {
+        fill: #1D77EF;
+      }
+      .axis {
+        stroke: red;
+        stroke-width: 1;
+        fill: none;
+      }
+    </style>
+    <div class="ctest1">
+      <svg id="idsvg"></svg>
+    </div>
+    <!--  -->
+
+    <!-- stackedBarDemo2 -->
+    <style media="screen">
+      #stackedBar {
+        width: 670px;
+        height: 450px;
+        border: 1px solid blue;
+      }
+    </style>
+    <!-- // stackedBarDemo2 -->
+
+  </body>
+</html>

@@ -1,0 +1,17 @@
+#idsvg {
+  width: 600px;
+  height: 400px
+}
+#d3 {
+  width: 670px;
+  height: 450px;
+  border: 1px solid blue;
+}
+.bar {
+  fill: #1D77EF;
+}
+.axis {
+  stroke: red;
+  stroke-width: 1;
+  fill: none;
+}

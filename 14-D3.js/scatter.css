@@ -1,0 +1,15 @@
+#idsvg {
+  width: 600px;
+  height: 400px;
+  border: 1px solid blue;
+}
+.gridx {
+  stroke: gray;
+  stroke-dasharray: 2.1;
+  stroke-opacity: 0.3;
+}
+.gridy {
+  stroke: gray;
+  stroke-dasharray: 2.1;
+  stroke-opacity: 0.7;
+}
