@@ -1,0 +1,1000 @@
+use:  postAsync.js
+농구 , 11
+get: postAsync.html
+use:  postAsync.js
+농구 , 11
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug eventServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `eventServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: event.html
+use:  event.js
+get: event.html
+use:  event.js
+get: event.html
+use:  event.js
+use:  getData.txt
+get: event.html
+use:  event.js
+get: event.html
+use:  getData.txt
+use:  event.js
+use:  getData.txt
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 84F8-405E
+
+ C:\server\src\55 디렉터리
+
+2016-02-20  오후 05:34    <DIR>          .
+2016-02-20  오후 05:34    <DIR>          ..
+2016-02-20  오후 05:03               181 event.html
+2016-02-20  오후 05:12               595 event.js
+2016-02-20  오후 05:08               586 eventServer.js
+2016-02-20  오후 04:10               195 getAsync.html
+2016-02-20  오후 03:59               279 getAsync.js
+2016-02-20  오후 04:04                15 getData.txt
+2016-02-20  오후 04:07               433 getServer.js
+2016-02-20  오후 04:54               210 postAsync.html
+2016-02-20  오후 04:48               412 postAsync.js
+2016-02-20  오후 04:51               788 postServer.js
+2016-02-20  오후 05:33               186 readyState.html
+2016-02-20  오후 05:33               562 readyState.js
+2016-02-20  오후 05:35               586 readyStateServer.js
+              13개 파일               5,028 바이트
+               2개 디렉터리  28,694,409,216 바이트 남음
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node readyStateServer.js
+server on; port: 3000
+^C
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug readyStateServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `readyStateServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: readyState.html
+use:  readyState.js
+use:  getData.txt
+get: readyState.html
+use:  readyState.js
+use:  getData.txt
+get: readyState.html
+use:  readyState.js
+use:  getData.txt
+get: readyState.html
+use:  readyState.js
+use:  getData.txt
+get: readyState.html
+use:  readyState.js
+use:  getData.txt
+get: readyState.html
+use:  readyState.js
+use:  getData.txt
+get: readyState.html
+use:  readyState.js
+use:  getData.txt
+get: readyState.html
+use:  readyState.js
+use:  getData.txt
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseXMLServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseXMLServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: xmlData.xml
+ReferenceError: filename is not defined
+    at C:\server\src\55\responseXMLServer.js:18:7
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\server\node_modules\express\lib\router\index.js:312:13)
+    at C:\server\node_modules\express\lib\router\index.js:280:7
+    at Function.process_params (C:\server\node_modules\express\lib\router\index.js:330:12)
+    at next (C:\server\node_modules\express\lib\router\index.js:271:10)
+    at jsonParser (C:\server\node_modules\body-parser\lib\types\json.js:100:40)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\server\node_modules\express\lib\router\index.js:312:13)
+    at C:\server\node_modules\express\lib\router\index.js:280:7
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseXMLServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseXMLServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: xmlData.xml
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+get: xmlData.xml
+get: xmlData.xml
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseXMLServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseXMLServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: responseXML.html
+use:  responseXML.js
+get: responseXML.html
+use:  responseXML.js
+get: responseXML.html
+use:  responseXML.js
+get: responseXML.html
+use:  responseXML.js
+일괄 작업을 끝내시겠습니까 (Y/N)?
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseXMLServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseXMLServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: responseXML.html
+use:  responseXML.js
+use:  xmlData.xml
+get: responseXML.html
+get: responseXML.html
+get: responseXML.html
+use:  responseXML.js
+use:  xmlData.xml
+get: responseXML.html
+use:  responseXML.js
+use:  xmlData.xml
+get: responseXML.html
+get: responseXML.html
+use:  responseXML.js
+use:  xmlData.xml
+get: responseXML.html
+use:  responseXML.js
+use:  xmlData.xml
+get: responseXML.html
+use:  responseXML.js
+use:  xmlData.xml
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseTypeServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseTypeServer.js`
+
+Debugger listening on port 5858
+ Assertion failed: (err) == (0), file src\debug-agent.cc, line 154
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseTypeServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseTypeServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: responseType.html
+use:  responseType.js
+use:  nodejs.png
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+get: responseType.html
+use:  responseType.js
+use:  nodejs.png
+get: responseType.html
+use:  responseType.js
+use:  nodejs.png
+get: responseType.html
+use:  responseType.js
+use:  nodejs.png
+get: responseType.html
+use:  responseType.js
+use:  nodejs.png
+get: responseType.html
+use:  responseType.js
+use:  nodejs.png
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseTypeServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseTypeServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: responseType.html
+use:  responseType.js
+use:  jimin.jpg
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\jimin.jpg'
+    at Error (native)
+use:  jimin.jpg
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\jimin.jpg'
+    at Error (native)
+use:  images
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images'
+    at Error (native)
+use:  images
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images'
+    at Error (native)
+use:  images
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images'
+    at Error (native)
+use:  images
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images'
+    at Error (native)
+use:  images
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images'
+    at Error (native)
+use:  images
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images'
+    at Error (native)
+use:  images
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images'
+    at Error (native)
+get: responseType.html
+use:  responseType.js
+use:  nodejs.png
+get: responseType.html
+use:  responseType.js
+use:  nodejs.png
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseTypeServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseTypeServer.js`
+
+Debugger listening on port 5858
+ 일괄 작업을 끝내시겠습니까 (Y/N)?
+^C
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseTypeServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseTypeServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: responseType.html
+use:  responseType.js
+use:  images/jimin.jpg
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images\jimin.jpg'
+    at Error (native)
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+use:  images
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images'
+    at Error (native)
+get: responseType.html
+use:  responseType.js
+use:  images/jimin.jpg
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images\jimin.jpg'
+    at Error (native)
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ Y
+'Y'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseTypeServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseTypeServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: responseType.html
+use:  responseType.js
+use:  images/jimin.jpg
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images\jimin.jpg'
+    at Error (native)
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+get: responseType.html
+use:  responseType.js
+use:  images/jimin.jpg
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\images\jimin.jpg'
+    at Error (native)
+일괄 작업을 끝내시겠습니까 (Y/N)?
+^C
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug responseHeaderServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `responseHeaderServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get:  responseHeader.html
+use:  responseHeader.js
+use:  favicon.ico
+use:  jsonData.txt
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+get:  responseHeader.html
+use:  responseHeader.js
+use:  jsonData.txt
+get:  responseHeader.html
+use:  responseHeader.js
+use:  jsonData.txt
+get:  responseHeader.html
+use:  responseHeader.js
+use:  jsonData.txt
+get:  responseHeader.html
+use:  responseHeader.js
+use:  jsonData.txt
+get:  responseHeader.html
+use:  responseHeader.js
+use:  jsonData.txt
+get:  responseHeader.html
+use:  responseHeader.js
+use:  jsonData.txt
+get:  responseHeader.html
+use:  responseHeader.js
+use:  jsonData.txt
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug formdataServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `formdataServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get: responseXML.html
+use:  responseXML.js
+use:  xmlData.xml
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug formdataServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `formdataServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get:  formdata.html
+use:  formdata.js
+object
+body:  { sportsName: 'sports', musicName: 'music' }
+object
+body:  { sportsName: 'sports', musicName: 'music' }
+get:  formdata.html
+object
+body:  { sportsName: 'sports', musicName: 'music' }
+object
+body:  { sportsName: 'sports', musicName: 'music' }
+object
+body:  { sportsName: 'sports', musicName: 'music' }
+use:  formdata.js
+object
+body:  { sportsName: 'sports', musicName: 'music' }
+object
+body:  { sportsName: 'sports', musicName: 'music' }
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug formfileServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `formfileServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get:  formfile.html
+use:  formfile.js
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+get:  formfile.html
+use:  formfile.js
+TypeError: Cannot read property 'originalname' of undefined
+    at C:\server\src\55\formfileServer.js:20:31
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at multerMiddleware (C:\server\node_modules\multer\lib\make-middleware.js:18:41)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (C:\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\server\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (C:\server\node_modules\express\lib\router\index.js:330:12)
+TypeError: Cannot read property 'originalname' of undefined
+    at C:\server\src\55\formfileServer.js:20:31
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at multerMiddleware (C:\server\node_modules\multer\lib\make-middleware.js:18:41)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (C:\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\server\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (C:\server\node_modules\express\lib\router\index.js:330:12)
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug formfileServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `formfileServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug formfileServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `formfileServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+TypeError: Cannot read property 'originalname' of undefined
+    at C:\server\src\55\formfileServer.js:20:31
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at multerMiddleware (C:\server\node_modules\multer\lib\make-middleware.js:18:41)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (C:\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\server\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (C:\server\node_modules\express\lib\router\index.js:330:12)
+get:  formfile.html
+get:  formfile.html
+use:  formfile.js
+TypeError: Cannot read property 'originalname' of undefined
+    at C:\server\src\55\formfileServer.js:20:31
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at multerMiddleware (C:\server\node_modules\multer\lib\make-middleware.js:18:41)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (C:\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\server\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (C:\server\node_modules\express\lib\router\index.js:330:12)
+get:  formfile.html
+use:  formfile.js
+TypeError: Cannot read property 'originalname' of undefined
+    at C:\server\src\55\formfileServer.js:20:31
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at multerMiddleware (C:\server\node_modules\multer\lib\make-middleware.js:18:41)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\server\node_modules\express\lib\router\route.js:131:13)
+    at Route.dispatch (C:\server\node_modules\express\lib\router\route.js:112:3)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at C:\server\node_modules\express\lib\router\index.js:277:22
+    at Function.process_params (C:\server\node_modules\express\lib\router\index.js:330:12)
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug formfileServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `formfileServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get:  formfile.html
+use:  formfile.js
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+get:  formfile.html
+use:  formfile.js
+POST 다운로드 (2).jpg
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ node-debug bindServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `bindServer.js`
+
+Debugger listening on port 5858
+ server on; port: 3000
+get:  bind.html
+use:  bind.js
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\55\favicon.ico'
+    at Error (native)
+get:  bind.html
+use:  bind.js
+use:  bindData.txt
+get:  bind.html
+use:  bind.js
+use:  bindData.txt
+get:  bind.html
+use:  bind.js
+use:  bindData.txt
+get:  bind.html
+use:  bind.js
+use:  bindData.txt
+get:  bind.html
+use:  bind.js
+use:  bindData.txt
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$
+SINPLE_10@SINPLE-10 C:\server\src\55
+$ cd ..
+
+SINPLE_10@SINPLE-10 C:\server\src
+$ dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 84F8-405E
+
+ C:\server\src 디렉터리
+
+2016-02-21  오후 04:07    <DIR>          .
+2016-02-21  오후 04:07    <DIR>          ..
+2016-02-20  오후 12:14    <DIR>          20
+2016-02-20  오후 02:11    <DIR>          40
+2016-02-21  오후 03:39    <DIR>          55
+2016-02-21  오후 04:08    <DIR>          60
+2016-02-20  오후 12:16               271 hello.js
+2016-02-21  오후 12:02    <DIR>          images
+               1개 파일                 271 바이트
+               7개 디렉터리  28,380,450,816 바이트 남음
+
+SINPLE_10@SINPLE-10 C:\server\src
+$ cd 60
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 84F8-405E
+
+ C:\server\src\60 디렉터리
+
+2016-02-21  오후 04:08    <DIR>          .
+2016-02-21  오후 04:08    <DIR>          ..
+2016-02-21  오후 04:21               495 socket.html
+2016-02-21  오후 04:13               828 socket.js
+2016-02-21  오후 04:18               836 socketServer.js
+               3개 파일               2,159 바이트
+               2개 디렉터리  28,380,450,816 바이트 남음
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug socketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `socketServer.js`
+
+Debugger listening on port 5858
+ C:\server\src\60\socketServer.js:6
+app.get('/', function(req, res) {
+    ^
+
+TypeError: app.get is not a function
+    at Object.<anonymous> (C:\server\src\60\socketServer.js:6:5)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.runMain [as _onTimeout] (module.js:447:10)
+    at Timer.listOnTimeout (timers.js:92:15)
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug socketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `socketServer.js`
+
+Debugger listening on port 5858
+ C:\server\src\60\socketServer.js:21
+socket.sockets.on('connection', function(client) {
+^
+
+ReferenceError: socket is not defined
+    at Object.<anonymous> (C:\server\src\60\socketServer.js:21:1)
+    at Module._compile (module.js:413:34)
+    at Object.Module._extensions..js (module.js:422:10)
+    at Module.load (module.js:357:32)
+    at Function.Module._load (module.js:314:12)
+    at Module.runMain [as _onTimeout] (module.js:447:10)
+    at Timer.listOnTimeout (timers.js:92:15)
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug socketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `socketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+get: socket.html
+ReferenceError: url is not defined
+    at C:\server\src\60\socketServer.js:14:18
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\server\node_modules\express\lib\router\index.js:312:13)
+    at C:\server\node_modules\express\lib\router\index.js:280:7
+    at Function.process_params (C:\server\node_modules\express\lib\router\index.js:330:12)
+    at next (C:\server\node_modules\express\lib\router\index.js:271:10)
+    at expressInit (C:\server\node_modules\express\lib\middleware\init.js:33:5)
+    at Layer.handle [as handle_request] (C:\server\node_modules\express\lib\router\layer.js:95:5)
+    at trim_prefix (C:\server\node_modules\express\lib\router\index.js:312:13)
+    at C:\server\node_modules\express\lib\router\index.js:280:7
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug socketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `socketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+get: socket.html
+use:  socket.js
+get: socket.html
+use:  socket.js
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug socketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `socketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+get: socket.html
+use:  socket.js
+1
+1
+get: socket.html
+use:  socket.js
+1
+get: socket.html
+use:  socket.js
+1
+2
+get: socket.html
+use:  socket.js
+1
+1
+get: socket.html
+use:  socket.js
+null
+1
+1
+1
+1
+1
+1
+2
+2
+2
+2
+2
+2
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ dir
+ C 드라이브의 볼륨에는 이름이 없습니다.
+ 볼륨 일련 번호: 84F8-405E
+
+ C:\server\src\60 디렉터리
+
+2016-02-21  오후 05:09    <DIR>          .
+2016-02-21  오후 05:09    <DIR>          ..
+2016-02-21  오후 04:43               544 socket.html
+2016-02-21  오후 04:59               968 socket.js
+2016-02-21  오후 04:26               997 socketServer.js
+2016-02-21  오후 05:09               185 webSocket.html
+2016-02-21  오후 05:11               204 webSocket.js
+2016-02-21  오후 05:15             1,431 webSocketServer.js
+               6개 파일               4,329 바이트
+               2개 디렉터리  28,391,665,664 바이트 남음
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+events.js:154
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:856:11)
+    at exports._exceptionWithHostPort (util.js:879:20)
+    at Server._listen2 (net.js:1227:14)
+    at listen (net.js:1263:10)
+    at net.js:1372:9
+    at nextTickCallbackWith3Args (node.js:486:9)
+    at process._tickCallback (node.js:392:17)
+    at Module.runMain [as _onTimeout] (module.js:449:11)
+    at Timer.listOnTimeout (timers.js:92:15)
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+events.js:154
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:856:11)
+    at exports._exceptionWithHostPort (util.js:879:20)
+    at Server._listen2 (net.js:1227:14)
+    at listen (net.js:1263:10)
+    at net.js:1372:9
+    at nextTickCallbackWith3Args (node.js:486:9)
+    at process._tickCallback (node.js:392:17)
+    at Module.runMain [as _onTimeout] (module.js:449:11)
+    at Timer.listOnTimeout (timers.js:92:15)
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+events.js:154
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:3000
+    at Object.exports._errnoException (util.js:856:11)
+    at exports._exceptionWithHostPort (util.js:879:20)
+    at Server._listen2 (net.js:1227:14)
+    at listen (net.js:1263:10)
+    at net.js:1372:9
+    at nextTickCallbackWith3Args (node.js:486:9)
+    at process._tickCallback (node.js:392:17)
+    at Module.runMain [as _onTimeout] (module.js:449:11)
+    at Timer.listOnTimeout (timers.js:92:15)
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+일괄 작업을 끝내시겠습니까 (Y/N)?
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+get: webSocket.html
+use:  webSocket.js
+use:  favicon.ico
+get: webSocket.html
+Error: ENOENT: no such file or directory, stat 'C:\server\src\60\favicon.ico'
+    at Error (native)
+use:  webSocket.js
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+events.js:154
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE 0.0.0.0:3300
+    at Object.exports._errnoException (util.js:856:11)
+    at exports._exceptionWithHostPort (util.js:879:20)
+    at Server._listen2 (net.js:1227:14)
+    at listen (net.js:1263:10)
+    at net.js:1372:9
+    at nextTickCallbackWith3Args (node.js:486:9)
+    at process._tickCallback (node.js:392:17)
+    at Module.runMain [as _onTimeout] (module.js:449:11)
+    at Timer.listOnTimeout (timers.js:92:15)
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+get: webSocket.html
+use:  webSocket.js
+use:  favicon.ico
+Error: ENOENT: no such file or directory, stat 'C:\server\src\60\favicon.ico'
+    at Error (native)
+get: webSocket.html
+use:  webSocket.js
+use:  webSocket.js
+get: webSocket.html
+use:  webSocket.js
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+get: webSocket.html
+use:  webSocket.js
+get: webSocket.html
+use:  webSocket.js
+get: webSocket.html
+use:  webSocket.js
+get: webSocket.html
+use:  webSocket.js
+get: webSocket.html
+use:  webSocket.js
+get: webSocket.html
+use:  webSocket.js
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ Y
+'Y'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+배치 파일이 아닙니다.
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$ node-debug webSocketServer.js
+Node Inspector v0.12.6
+Visit http://127.0.0.1:8080/?port=5858 to start debugging.
+Debugging `webSocketServer.js`
+
+Debugger listening on port 5858
+ server on port 3000
+get: webSocket.html
+use:  webSocket.js
+get: webSocket.html
+use:  webSocket.js
+get: webSocket.html
+use:  webSocket.js
+일괄 작업을 끝내시겠습니까 (Y/N)? Y
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
+SINPLE_10@SINPLE-10 C:\server\src\60
+$
