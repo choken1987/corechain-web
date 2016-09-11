@@ -1,0 +1,15 @@
+Failed to load resource: net::ERR_BLOCKED_BY_CLIENT
+var a = "안녕하세요".match(/안녕/)
+undefined
+a
+["안녕"]
+var a = "안녕하세요안녕1안녕2".match(/안녕/)
+undefined
+a
+["안녕"]
+var a = "안녕하세요안녕1안녕2".match(/안녕ㅁ/)
+undefined
+a
+null
+var a = "안녕하세요안녕1안녕2".match(/안녕/)
+undefined

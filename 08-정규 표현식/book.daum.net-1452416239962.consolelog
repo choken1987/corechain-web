@@ -1,0 +1,1451 @@
+Failed to load resource: net::ERR_BLOCKED_BY_CLIENT
+var check = function(str) {
+	return /[a-zA-Z]/.test(str);
+};
+
+var list = ['1234', '123', '12', '1234aa', 'aa1234', ' '];
+for ( var i = 0; i < list.length; i++ ){
+	console.log(check(list[i]));
+}
+false
+true
+false
+undefined
+var check = function(str) {
+	return /[a-zA-Z]/.test(str);
+};
+
+var list = [];
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+for ( var i = 0; i < list.length; i++ ){
+	console.log(check(list[i]));
+}
+true
+false
+true
+false
+undefined
+var check = function(str) {
+	return /[a-zA-Z]/.test(str);
+};
+
+var list = [];
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+ABCD : true
+abcd : true
+ABcd : true
+123 : false
+12AB : true
+AB12 : true
+  : false
+undefined
+var check = function(str) {
+	return /^[a-zA-Z]$/.test(str);
+};
+
+var list = [];
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+ABCD : false
+abcd : false
+ABcd : false
+123 : false
+12AB : false
+AB12 : false
+  : false
+undefined
+//
+var check = function(str) {
+	return /^[a-zA-Z]*$/.test(str);
+};
+
+var list = [];
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+ABCD : true
+abcd : true
+ABcd : true
+123 : false
+12AB : false
+AB12 : false
+  : false
+undefined
+var check = function(str) {
+	return /^[a-zA-Z]*$/.test(str);
+};
+
+var list = [];
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+ABCD : true
+abcd : true
+ABcd : true
+123 : false
+12AB : false
+AB12 : false
+  : false
+ : true
+undefined
+//
+var check = function(str) {
+	return /^[a-zA-Z]+$/.test(str);
+};
+
+var list = [];
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+ABCD : true
+abcd : true
+ABcd : true
+123 : false
+12AB : false
+AB12 : false
+  : false
+ : false
+undefined
+var regExp = new RegExp('/^[a-zA-Z]+$/', 'g');
+
+//
+var check = function(str) {
+	return regExp.test(str);
+};
+
+var list = [];
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+ABCD : false
+abcd : false
+ABcd : false
+123 : false
+12AB : false
+AB12 : false
+  : false
+ : false
+undefined
+typeof regExp
+"object"
+regExp
+/\/^[a-zA-Z]+$\//g
+var regExp = new RegExp('^[a-zA-Z]+$', 'g');
+
+//
+var check = function(str) {
+	return regExp.test(str);
+};
+
+var list = [];
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+ABCD : true
+abcd : false
+ABcd : true
+123 : false
+12AB : false
+AB12 : false
+  : false
+ : false
+undefined
+regExp
+/^[a-zA-Z]+$/g
+// 숫자만 입력 체크
+var regExp 	= {};
+var list 	= [];
+
+regExp = new RegExp('^\d+[3,4]$'	, 'g'); // 숫자만
+regExp = new RegExp('^[a-zA-Z]*$'	, 'g'); // 영문 대소문자만; 비교1
+regExp = new RegExp('^[a-zA-Z]+$'	, 'g'); // 영문 대소문자만; 비교2
+
+list.push('1234');
+list.push('123');
+list.push('12');
+list.push('1234aa');
+list.push('aa1234');
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+
+var check = function(str) {
+	return regExp.test(str);
+};
+
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+1234 : false
+123 : false
+12 : false
+1234aa : false
+aa1234 : false
+ABCD : true
+abcd : false
+ABcd : true
+123 : false
+12AB : false
+AB12 : false
+  : false
+ : false
+undefined
+// 숫자만 입력 체크
+var regExp 	= {};
+var list 	= [];
+
+regExp = new RegExp('^\d+[3,4]$'	, 'g'); // 숫자만
+regExp = new RegExp('^[a-zA-Z]*$'	, 'g'); // 영문 대소문자만; 비교1
+regExp = new RegExp('^[a-zA-Z]+$'	, 'g'); // 영문 대소문자만; 비교2
+
+list.push('1234');
+list.push('123');
+list.push('12');
+list.push('1234aa');
+list.push('aa1234');
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+
+var check = function(str) {
+	console.log(regExp);
+	return regExp.test(str);
+};
+
+for ( var i = 0; i < list.length; i++ ){
+	console.log(list[i] + ' : ' + check(list[i]));
+}
+/^[a-zA-Z]+$/g
+1234 : false
+/^[a-zA-Z]+$/g
+123 : false
+/^[a-zA-Z]+$/g
+12 : false
+/^[a-zA-Z]+$/g
+1234aa : false
+/^[a-zA-Z]+$/g
+aa1234 : false
+/^[a-zA-Z]+$/g
+ABCD : true
+/^[a-zA-Z]+$/g
+abcd : false
+/^[a-zA-Z]+$/g
+ABcd : true
+/^[a-zA-Z]+$/g
+123 : false
+/^[a-zA-Z]+$/g
+12AB : false
+/^[a-zA-Z]+$/g
+AB12 : false
+/^[a-zA-Z]+$/g
+  : false
+/^[a-zA-Z]+$/g
+ : false
+undefined
+"CD_AB_EF".search(/AB/);
+"CD_AB_AB".search(/AB/g);
+"AB_CD_CD".search(/CD$/);
+"AB_CD".search(/EF/g);
+
+-1
+console.log("CD_AB_EF".search(/AB/));
+console.log("CD_AB_AB".search(/AB/g));
+console.log("AB_CD_CD".search(/CD$/));
+console.log("AB_CD".search(/EF/g));
+3
+3
+6
+-1
+undefined
+"".indexOf
+indexOf() { [native code] }
+// regular expression
+var regExp 	= {};
+var list 	= [];
+var target	= '';
+
+regExp = new RegExp('^\d+[3,4]$'	, 'g'); // 숫자만
+regExp = new RegExp('^[a-zA-Z]*$'	, 'g'); // 영문 대소문자만; 비교1
+regExp = new RegExp('^[a-zA-Z]+$'	, 'g'); // 영문 대소문자만; 비교2
+
+list.push('1234');
+list.push('123');
+list.push('12');
+list.push('1234aa');
+list.push('aa1234');
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+
+var check = function(str) {
+	return regExp.test(str);
+};
+
+for ( var i = 0; i < list.length; i++ ){
+	target = list[i];
+	console.log(target + ' : ' + check(target));
+}
+1234 : false
+123 : false
+12 : false
+1234aa : false
+aa1234 : false
+ABCD : true
+abcd : false
+ABcd : true
+123 : false
+12AB : false
+AB12 : false
+  : false
+ : false
+undefined
+for ( var i = 0; i < list.length; i++ ){
+	target = list[i];
+	console.log(target + '\t:\t' + check(target));
+}
+1234	:	false
+123	:	false
+12	:	false
+1234aa	:	false
+aa1234	:	false
+ABCD	:	true
+abcd	:	false
+ABcd	:	true
+123	:	false
+12AB	:	false
+AB12	:	false
+ 	:	false
+	:	false
+undefined
+regExp = new RegExp('[0-5]', '');
+check('54321');
+regExp = new RegExp('[A-E]', '');
+check('CDBD');
+regExp = new RegExp('[-3]', '');
+check('73-21');
+check('721');
+check('7321');
+true
+regExp = new RegExp('[0-5]', '');
+check('54321');
+regExp = new RegExp('[A-E]', '');
+check('CDBDa');
+regExp = new RegExp('[-3]', '');
+check('73-21');
+check('721');
+check('7321');
+true
+regExp = new RegExp('[A-E]', '');
+check('CDBDa');
+true
+/[A-E]/.test('CDBDa')
+true
+/[A-E]/g.test('CDBDa')
+true
+/^[A-E]$/g.test('CDBDa')
+false
+/^[A-E]$/g.test('CDBD')
+false
+/^[A-E]+$/g.test('CDBD')
+true
+/^[A-E]+$/g.test('CDBDa')
+false
+"abcd".match(/[^a]/)
+["b"]
+"abcd".match(/[^a]/g)
+["b", "c", "d"]
+"abcdefg".match(/[^a-c]/g)
+["d", "e", "f", "g"]
+"abcdefg".match(/[^a-cf-g]/g)
+["d", "e"]
+"abcdefg".match(/[^a-c]/g)
+["d", "e", "f", "g"]
+"abcdefg".match(/[^a-c*g]/g)
+["d", "e", "f"]
+"abcdefg".match(/[^a-c*g$]/g)
+["d", "e", "f"]
+"abcdefgg".match(/[^a-c*g$]/g)
+["d", "e", "f"]
+"abcdefgg".match(/[^a-c*g]/g)
+["d", "e", "f"]
+"abcdefgg".match(/[^a-c*]/g)
+["d", "e", "f", "g", "g"]
+"abcdefgg".match(/[^a-c]/g)
+["d", "e", "f", "g", "g"]
+"abcdefgg".match(/[^a-cg]/g)
+["d", "e", "f"]
+"abcdefgg".match(/[^a-cge]/g)
+["d", "f"]
+"abcdefgg".match(/[^a-c]/g)
+["d", "e", "f", "g", "g"]
+"정규표현식".match(/[^정표]/g)
+["규", "현", "식"]
+"정규표현식".match(/[^정표][식]/g)
+["현식"]
+"정규표현식".match(/[식]/g)
+["식"]
+"정규표현식".match(/[^정표][식]/g)
+["현식"]
+"abcdefggawnlfanlndlanwldnawlkdnafn".match(/[^a-c]/)
+["d"]
+"abcdefggawnlfanlndlanwldnawlkdnafn".match(/[^a-c]/g)
+["d", "e", "f", "g", "g", "w", "n", "l", "f", "n", "l", "n", "d", "l", "n", "w", "l", "d", "n", "w", "l", "k", "d", "n", "f", "n"]
+var regExp 	= {};
+var list 	= [];
+var target	= '';
+
+regExp = new RegExp('^\d+[3,4]$'	, 'g'); // 숫자만
+regExp = new RegExp('^[a-zA-Z]*$'	, 'g'); // 영문 대소문자만; 비교1
+regExp = new RegExp('^[a-zA-Z]+$'	, 'g'); // 영문 대소문자만; 비교2
+regExp = new RegExp('^[a-zA-Z^@]+$', 'g') // 영문 대소문자만 + @
+
+list.push('1234');
+list.push('123');
+list.push('12');
+list.push('1234aa');
+list.push('aa1234');
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+list.push('@a1b2c3');
+list.push('a1b2@c3');
+list.push('a1b2c@');
+
+
+var check = function(str) {
+	return regExp.test(str);
+};
+
+for ( var i = 0; i < list.length; i++ ){
+	target = list[i];
+	console.log(target + '\t:\t' + check(target));
+}
+1234	:	false
+123	:	false
+12	:	false
+1234aa	:	false
+aa1234	:	false
+ABCD	:	true
+abcd	:	false
+ABcd	:	true
+123	:	false
+12AB	:	false
+AB12	:	false
+ 	:	false
+	:	false
+@a1b2c3	:	false
+a1b2@c3	:	false
+a1b2c@	:	false
+undefined
+regExp = new RegExp('^[a-zA-Z]+$[^@]', 'g') // 영문 대소문자만 + @
+
+list.push('1234');
+list.push('123');
+list.push('12');
+list.push('1234aa');
+list.push('aa1234');
+list.push('ABCD');
+list.push('abcd');
+list.push('ABcd');
+list.push('123');
+list.push('12AB');
+list.push('AB12');
+list.push(' ');
+list.push('');
+list.push('@a1b2c3');
+list.push('a1b2@c3');
+list.push('a1b2c@');
+
+
+var check = function(str) {
+	return regExp.test(str);
+};
+
+for ( var i = 0; i < list.length; i++ ){
+	target = list[i];
+	console.log(target + '\t:\t' + check(target));
+}
+1234	:	false
+123	:	false
+12	:	false
+1234aa	:	false
+aa1234	:	false
+ABCD	:	false
+abcd	:	false
+ABcd	:	false
+123	:	false
+12AB	:	false
+AB12	:	false
+ 	:	false
+	:	false
+@a1b2c3	:	false
+a1b2@c3	:	false
+a1b2c@	:	false
+1234	:	false
+123	:	false
+12	:	false
+1234aa	:	false
+aa1234	:	false
+ABCD	:	false
+abcd	:	false
+ABcd	:	false
+123	:	false
+12AB	:	false
+AB12	:	false
+ 	:	false
+	:	false
+@a1b2c3	:	false
+a1b2@c3	:	false
+a1b2c@	:	false
+undefined
+"@a1b2c3".test(/^[a-zA-Z]+$/)
+Uncaught TypeError: "@a1b2c3".test is not a function(…)
+"@a1b2c3".test(/^[a-zA-Z]+$/g)
+Uncaught TypeError: "@a1b2c3".test is not a function(…)
+"@a1b2c3".exec(/^[a-zA-Z]+$/g)
+Uncaught TypeError: "@a1b2c3".exec is not a function(…)
+/^[a-zA-Z]+$/g.text("@a1b2c3")
+Uncaught TypeError: /^[a-zA-Z]+$/g.text is not a function(…)
+"@a1b2c3".match(/^[a-zA-Z]+$/g)
+null
+"@a1b2c3".match(/[a-zA-Z]/g)
+["a", "b", "c"]
+"@a1b2c3".match(/[a-zA-Z@]/g)
+["@", "a", "b", "c"]
+"@a1b2c3".match(/[a-zA-Z^@]/g)
+["@", "a", "b", "c"]
+"@a1b2c3".match(/[a-zA-Z][^@]/g)
+["a1", "b2", "c3"]
+"@a1b2c3".match(/[^@][a-zA-Z]/g)
+["1b", "2c"]
+"@a1b2c3".match(/[^@a-zA-Z]/g)
+["1", "2", "3"]
+"@a1b2c3".match(/[a-zA-Z^@]/g)
+["@", "a", "b", "c"]
+"@a1b2c3".match(/[a-zA-Z-]/g)
+["a", "b", "c"]
+"@a1b2-c-3".match(/[a-zA-Z-]/g)
+["a", "b", "-", "c", "-"]
+"@a1b2-c-3".match(/[a-zA-Z-]/g)
+["a", "b", "-", "c", "-"]
+"@a1b2-c-3".match(/[a-zA-Z^-]/g)
+["a", "b", "-", "c", "-"]
+"@a1b2-c-3".match(/[a-zA-Z][-]/g)
+["c-"]
+"@a1b2-c-3".match(/[a-zA-Z^-]/g)
+["a", "b", "-", "c", "-"]
+"1388174-135-135-1351-35-135".match(/[0-9-]/g)
+["1", "3", "8", "8", "1", "7", "4", "-", "1", "3", "5", "-", "1", "3", "5", "-", "1", "3", "5", "1", "-", "3", "5", "-", "1", "3", "5"]
+"1388174-135-135-1351-35-135".match(/[0-9-]+/g)
+["1388174-135-135-1351-35-135"]
+var str = "1388174-135-135-1351-35-135";
+str.match(/[0-9-]+/g);
+str = str.replace(/[-]/, '');
+
+
+"1388174135-135-1351-35-135"
+var str = "1388174-135-135-1351-35-135";
+str.match(/[0-9-]+/g);
+console.log(str.replace(/[-]/, '');)
+
+
+Uncaught SyntaxError: missing ) after argument list(…)
+var str = "1388174-135-135-1351-35-135";
+str.match(/[0-9-]+/g);
+console.log(str.replace(/[-]/, ''));
+
+
+1388174135-135-1351-35-135
+undefined
+var str = "1388174-135-135-1351-35-135";
+str.match(/[0-9-]+/g);
+console.log(str.replace(/[-]/g, ''));
+
+
+1388174135135135135135
+undefined
+var str = "1388174-135-135-1351-35-135";
+str.match(/[0-9-]+/g);
+console.log(str.replace(/[-]/g, ''));
+
+1388174135135135135135
+undefined
+var str = "1388174-135-135-1351-35-135";
+console.log(str.match(/[0-9-]+/g));
+console.log(str.replace(/[-]/g, ''));
+
+["1388174-135-135-1351-35-135"]0: "1388174-135-135-1351-35-135"length: 1__proto__: Array[0]_each: (c)compact: ()concat: concat()constructor: Array()contains: ()copy: ()copyWithin: copyWithin()detect: (c)each: (c)entries: entries()every: every()fill: fill()filter: filter()find: find()findAll: (c)findIndex: findIndex()flatten: ()forEach: forEach()getFirst: ()getLast: ()include: (a)includes: includes()indexOf: indexOf()inject: (a,c)isArray: truejoin: join()keys: keys()last: ()lastIndexOf: lastIndexOf()length: 0map: map()pluck: (c)pop: pop()push: push()reduce: reduce()reduceRight: reduceRight()reverse: reverse()select: (c)shift: shift()size: ()slice: slice()some: some()sort: sort()splice: splice()toDecode: ()toEncode: ()toJSON: ()toLocaleString: toLocaleString()toMap: (c)toString: toString()uniq: (a)unshift: unshift()without: ()Symbol(Symbol.iterator): values()Symbol(Symbol.unscopables): Object__proto__: Object
+1388174135135135135135
+undefined
+var str = "-1388174-135-135-1351-35-135-";
+console.log(str.match(/^[0-9]+[0-9-]*[0-9]$/g));
+console.log(str.replace(/[-]/g, ''));
+
+null
+1388174135135135135135
+undefined
+var str = "1388174-135-135-1351-35-135";
+console.log(str.match(/^[0-9]+[0-9-]*[0-9]$/g));
+console.log(str.replace(/[-]/g, ''));
+
+["1388174-135-135-1351-35-135"]
+1388174135135135135135
+undefined
+regExp = new RegExp('^[0-9][0-9-]*[0-9]$' ,'g')
+var str = "1388174-135-135-1351-35-135";
+if(check(str)){
+	console.log(str.replace(/[-]/g, ''));
+}
+
+1388174135135135135135
+undefined
+var check = function(str) {
+	var is = str + '\t:\t'+ regExp.test(str);
+	console.log(is)
+	return is;
+};
+
+for ( var i = 0; i < list.length; i++ ){
+	target = list[i];
+	check(target);
+}
+
+//
+regExp = new RegExp('[0-5]', '');
+check('54321');
+regExp = new RegExp('[A-E]', '');
+check('CDBDa');
+regExp = new RegExp('[-3]', '');
+check('73-21');
+check('721');
+check('7321');
+
+//
+regExp = new RegExp('^[0-9][0-9-]*[0-9]$' ,'g')
+var str = "1388174-135-135-1351-35-135";
+if(check(str)){
+	console.log(str.replace(/[-]/g, ''));
+}
+1234	:	false
+123	:	true
+12	:	false
+1-1-1	:	true
+1234	:	false
+123	:	true
+12	:	false
+1234aa	:	true
+aa1234	:	true
+ABCD	:	false
+abcd	:	false
+ABcd	:	false
+123	:	true
+12AB	:	false
+AB12	:	true
+ 	:	false
+	:	false
+@a1b2c3	:	true
+a1b2@c3	:	true
+a1b2c@	:	false
+-1-1-1	:	true
+1-1-1-	:	false
+1-1-1	:	true
+1234	:	false
+123	:	true
+12	:	false
+1234aa	:	true
+aa1234	:	true
+ABCD	:	false
+abcd	:	false
+ABcd	:	false
+123	:	true
+12AB	:	false
+AB12	:	true
+ 	:	false
+	:	false
+@a1b2c3	:	true
+a1b2@c3	:	true
+a1b2c@	:	false
+-1-1-1	:	true
+1-1-1-	:	false
+1-1-1	:	true
+undefined
+"1-11--125-12-51-25".match(/[0-9\-]+/g)
+["1-11--125-12-51-25"]
+"1-11--125-12-51-25-".match(/[0-9\-]+/g)
+["1-11--125-12-51-25-"]
+"--1-11--125-12-51-25-".match(/[0-9\-]+/g)
+["--1-11--125-12-51-25-"]
+"--1-11--125-12-51-25--".match(/[0-9\-]+/g)
+["--1-11--125-12-51-25--"]
+"1-11--125-12-51-25".match(/[0-9\-]+/g)
+["1-11--125-12-51-25"]
+"1-11--125-12-51-25".match(/[0-9]+/g)
+["1", "11", "125", "12", "51", "25"]
+"1-11--125-12-51-25".match(/[0-9-]+/g)
+["1-11--125-12-51-25"]
+"1-11--125-12-51-25".match(/[0-2-3]+/g)
+["1-11--12", "-12-", "1-2"]
+"1-11--125-12-51-25".match(/[0-2-5]+/g)
+["1-11--125-12-51-25"]
+"1-11--125-12-51-25".match(/[0-2-5]+/g).length
+1
+"1-11--125-12-51-25".match(/[0-2-5]+/g)[0].length
+18
+"1-11--125-12-51-25".match(/[0-2-5]*/g)[0].length
+18
+"1-11--125-12-51-25".match(/[0-2-3]/g)[0].length
+1
+"1-11--125-12-51-25".match(/[0-2-4]/g)[0].length
+1
+"1-11--125-12-51-25".match(/[0-2-3]+/g)[0].length
+8
+"1-11--125-12-51-25".match(/[0-2-3]+/g)
+["1-11--12", "-12-", "1-2"]
+"a1b2@c3".match(/[@]+/g)
+["@"]
+"a1b2@c3".match(/[^@]+/g)
+["a1b2", "c3"]
+"a1b2@c3".match(/[a-z^@]+/g)
+["a", "b", "@c"]
+"a1b2@c3".match(/[0-9a-z^@]+/g)
+["a1b2@c3"]
+"a1b2@c3".match(/[0-9a-z@]+/g)
+["a1b2@c3"]
+"a1b2@c3".match(/[0-9a-z\@]+/g)
+["a1b2@c3"]
+"a1b2@c3".match(/[0-9a-z^\@]+/g)
+["a1b2@c3"]
+"a1b2@c3".match(/[^\@]+/g)
+["a1b2", "c3"]
+"a1b2@c3".match(/[^@]+/g)
+["a1b2", "c3"]
+"a1b2@c3".match(/[^\@]+/g)
+["a1b2", "c3"]
+"a1b2@c3".match(/[0-9a-z@]+/g)
+["a1b2@c3"]
+"a1b2@c3".match(/[0-9a-z^@]+/g)
+["a1b2@c3"]
+"a1b2@c3".match(/[0-9a-z^\@]+/g)
+["a1b2@c3"]
+"a1b2@c3".match(/[^\@]+/g)
+["a1b2", "c3"]
+"a1b2@c3".match(/[0-9a-z]|[^\@]+/g)
+["a", "1", "b", "2", "c", "3"]
+"a1b2@c3".match(/[0-9a-z]+|[^\@]/g)
+["a1b2", "c3"]
+"a1b2@c3".match(/[0-9a-z]+|[@]/g)
+["a1b2", "@", "c3"]
+"a1b2@c3".match(/[0-9a-z]+|[^\@]/g)
+["a1b2", "c3"]
+"a1b2@c3".match(/[0-9a-z]|[^\@]/g)
+["a", "1", "b", "2", "c", "3"]
+"a1b2@c3".match(/[0-9a-z]|[\@]/g)
+["a", "1", "b", "2", "@", "c", "3"]
+"a1b2@c3".match(/[0-9a-z]+|[^\@]/g)
+["a1b2", "c3"]
+"a1b2@c3".match(/[0-9a-zA-Z]|[\@]/g)
+["a", "1", "b", "2", "@", "c", "3"]
+"a1b2@c3".match(/[0-9a-zA-Z]+|[\@]/g)
+["a1b2", "@", "c3"]
+"a1b2@c3".match(/[0-9a-zA-Z^\@]+|[]/g)
+["a1b2@c3"]
+"a1b2@c3".match(/[0-9a-zA-Z^\@]/g)
+["a", "1", "b", "2", "@", "c", "3"]
+"a1b2@c3".match(/[0-9a-zA-Z^\@]+/g)
+["a1b2@c3"]
+"<div id='sports'>축구</div>".match(/<\/?[^>]+>/ig)
+["<div id='sports'>", "</div>"]
+"<div id='sports'>>축구</div>".match(/<\/?[^>]+>/ig)
+["<div id='sports'>", "</div>"]
+"<div id='spo>rts'>축구</div>".match(/<\/?[^>]+>/ig)
+["<div id='spo>", "</div>"]
+"<div id='sports'>축구</div>".match(/<\/?[^>]+>/ig)
+["<div id='sports'>", "</div>"]
+'^abc'.match(/^a/)
+null
+'^abc'.match(/a/)
+["a"]
+'^abc'.match(/^a/g)
+null
+'^abc'.match(/\^a/g)
+["^a"]
+'b^ac'.match(/^a/g)
+null
+'b^ac'.match(/\^a/g)
+["^a"]
+"\\ab".match(/\\a/)
+["\a"]
+"\\ab".match(/\\\a/)
+["\a"]
+"\\ab".match(/\\\\a/)
+null
+"\\ab".match(/\\a/)
+["\a"]
+"\\ab".match(/\\\a/)
+["\a"]
+"\\ab".match(/\\+a/)
+["\a"]
+"\\ab".match(/\\*a/)
+["\a"]
+"\\ab".match(/\\{2}a/)
+null
+"\\ab".match(/\\{1}a/)
+["\a"]
+"\\\\ab".match(/\\{2}a/)
+["\\a"]
+"\\\\ab"
+"\\ab"
+"\\ab"
+"\ab"
+'1abc23'.match(/\d/)
+["1"]
+'1abc23'.match(/\D/)
+["a"]
+'1abc23'.match(/\d/g)
+["1", "2", "3"]
+'1abc23'.match(/\D/g)
+["a", "b", "c"]
+'abc3'.match(/^\D+/g)
+["abc"]
+'abc3'.match(/^\D+$/g)
+null
+'abc'.match(/^\D+$/g)
+["abc"]
+'abc'.match(/^\D+/g)
+["abc"]
+'abc3'.match(/^\D+/g)
+["abc"]
+'abc3'.match(/^\D+$/g)
+null
+'abc3'.match(/^\D+/g)
+["abc"]
+\u0009
+Uncaught SyntaxError: Unexpected token ILLEGAL(…)
+\u00009
+Uncaught SyntaxError: Unexpected token ILLEGAL(…)
+'\u00009'
+"9"
+'\u0009'
+"	"
+'\u0009'.match(/\s/)
+["	"]
+'\u0009'.match(/^\s/)
+["	"]
+'\u0009'.match(/^\s$/)
+["	"]
+'\u0009'.match(/^\s${2}/)
+Uncaught SyntaxError: Invalid regular expression: /^\s${2}/: Nothing to repeat(…)
+'\u0009'.match(/^\s{2}$/)
+null
+'\u0009'.match(/^\s{1}$/)
+["	"]
+'\u0009'.match(/^\s{1,}$/)
+["	"]
+'\u0009\u0061'.match(/\s/)
+["	"]
+'\u0009\u0061'.match(/\S/)
+["a"]
+'\u0009\u0061'.match(/\s|\S/)
+["	"]
+'\u0009\u0061'.match(/\s|\S/g)
+["	", "a"]
+'\u0009\u0061aa'.match(/\s|\S/g)
+["	", "a", "a", "a"]
+'\u0009\u0061aa'.match(/\s+|\S+/g)
+["	", "aaa"]
+'\u0009\u0009\u0061aa'.match(/\s+|\S+/g)
+["		", "aaa"]
+'\u0009\u0009\u0061aa\u0009'.match(/\s+|\S+/g)
+["		", "aaa", "	"]
+/[0-9a-zA-Z\_]/.test('__')
+true
+/[0-9a-zA-Z\_]/.test('_')
+true
+/\W/g.test('_!*@#^!*@&^#(!%$(@')
+true
+/\W/g.exec('_!*@#^!*@&^#(!%$(@')
+["!"]
+'_!*@#^!*@&^#(!%$(@'.match(/\W/g)
+["!", "*", "@", "#", "^", "!", "*", "@", "&", "^", "#", "(", "!", "%", "$", "(", "@"]
+'_!*@#^!*@&^#(!%$(@'.match(/\W*/g)
+["", "!*@#^!*@&^#(!%$(@", ""]
+'_!*@#^!*@&^#(!%$(@'.match(/\W+/g)
+["!*@#^!*@&^#(!%$(@"]
+"ABC".match(/(A)/)
+["A", "A"]
+"ABC".match(/A/)
+["A"]
+"ABC".match(/((A))/)
+["A", "A", "A"]
+"ABC".match(/(A)B/)
+["AB", "A"]
+"ABCDEF".match(/AB(C|P)(D|Q)EF/)
+["ABCDEF", "C", "D"]
+"ABCDEF".match(/AB(_)(D|Q)EF/)
+null
+"ABCDEF".match(/AB(\b)(D|Q)EF/)
+null
+"ABCDEF".match(/AB(\B)(D|Q)EF/)
+null
+"ABCDEF".match(/AB(\s)(D|Q)EF/)
+null
+"ABCDEF".match(/AB(\S)(D|Q)EF/)
+["ABCDEF", "C", "D"]
+/((ball))|((base))/.exec("baseball")
+["base", undefined, undefined, "base", "base"]
+"baseball".match(/((ball))|((base))/)
+["base", undefined, undefined, "base", "base"]
+"baseball".match(/((ball)|(base))/)
+["base", "base", undefined, "base"]
+"{template}".match(/\{\w+}?\}/g)
+["{template}"]
+"{template}dnladnfl{afn}asnfa{sfnaksf}".match(/\{\w+}?\}/g)
+["{template}", "{afn}", "{sfnaksf}"]
+'abcdef'.match(/ab(c)(d)\1\2/)
+null
+'abcdef'.match(/ab/);
+["ab"]
+'abcdef'.match(/ab(c)(d)/)
+["abcd", "c", "d"]
+'abcdef'.match(/ab(c)(d)\1/)
+null
+'abcdef'.match(/ab(c)(d)/\1)
+Uncaught SyntaxError: Invalid regular expression flags(…)
+'abcdef'.match(/ab(c)\1(d)/)
+null
+'abcdef'.match(/ab(c)(d)\1\2/)
+null
+'abcdef'.match(/ab(c)(d)\1/)
+null
+"abcdef_cd".match(/ab(c|k)(d|x)ef_/);
+["abcdef_", "c", "d"]
+"abcdef_cd".match(/ab(c|k)(d|x)ef_\1\2/);
+["abcdef_cd", "c", "d"]
+"abcdef_cd".match(/ab(c|k)(d|x)ef_$1$2/);
+null
+"abcdef_cd".match(/ab(c|k)(d|x)ef_/);
+["abcdef_", "c", "d"]
+"abcdef_cd".match(/ab(c|k)(d|x)ef_/1);
+Uncaught SyntaxError: Invalid flags supplied to RegExp constructor '1'(…)
+"abcdef_cd".match(/ab(c|k)(d|x)ef_\1\1/);
+null
+"abcdef_cd".match(/ab(c|k)(d|x)ef_\1\2/);
+["abcdef_cd", "c", "d"]
+"abcdef_cd".match(/ab(c|k)(d|x)ef_\2\1/);
+null
+"abcdef_cd".match(/ab(c|k)(d|x)ef_\1\2/);
+["abcdef_cd", "c", "d"]
+"abcdef_cd".match(/ab(c|k)(d|x)ef_\1/);
+["abcdef_c", "c", "d"]
+"abcdef_cd".match(/ab(c|k)(d|x)ef_*\2/);
+null
+"abcdef_cd".match(/ab(c|k)(d|x)ef_,\2/);
+null
+"abcdef_cd".match(/ab(c|k)(d|x)ef_.\2/);
+["abcdef_cd", "c", "d"]
+"abcdef_cd".match(/ab(c|k)(d|x)ef_/);
+["abcdef_", "c", "d"]
+RegExp.$1
+"c"
+RegExp.$2
+"d"
+RegExp.$3
+""
+RegExp.$4
+""
+RegExp.$5
+""
+RegExp.$0
+undefined
+RegExp.$9
+""
+RegExp.$10
+undefined
+regExp.$1
+undefined
+regExp.$0
+undefined
+regExp.$1
+undefined
+regExp.$2
+undefined
+regExp.$3
+undefined
+RegExp.$3
+""
+RegExp.$1
+"c"
+RegExp.$2
+"d"
+RegExp.$0
+undefined
+"abcdef_cd".match(/ab(c|k)(d|x)ef/);
+["abcdef", "c", "d"]
+RegExp.$_
+"abcdef_cd"
+RegExp.$1
+"c"
+RegExp.$2
+"d"
+RegExp
+RegExp() { [native code] }
+typeof RegExp
+"function"
+RegExp.get $1
+Uncaught SyntaxError: Unexpected identifier(…)
+RegExp.get$1
+undefined
+RegExp.get_$1
+undefined
+RegExp.set$1
+undefined
+"129831723618273618641826491826497".match(/(^[+-]\d+)(\d{3})/)
+null
+"129831723618273618641826491826497".match(/(^[+-]?\d+)(\d{3})/)
+["129831723618273618641826491826497", "129831723618273618641826491826", "497"]
+// 콤마 삽입
+// /(^[+-]?\d+)(\d{3})/
+var pattern = /(^[+-]?\d+)(\d{3})/
+function insertComma(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, '$1'+ ',' + '$2');
+	}
+	return str;
+}
+
+insertComma('1984750917459820364');
+"1,984,750,917,459,820,364"
+// 콤마 삽입
+// /(^[+-]?\d+)(\d{3})/
+var pattern = /(^[+-]?\d+)(\d{3})/
+function insertComma(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, '$1'+ ',' + '$2');
+	}
+	return str;
+}
+
+insertComma('19847509174598201364');
+"19,847,509,174,598,201,364"
+// 콤마 삽입
+// /(^[+-]?\d+)(\d{3})/
+var pattern = /(^[+-]?\d+)(\d{3})/
+function insertComma(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, '$1'+ ',' + '$2');
+	}
+	return str;
+}
+
+insertComma('19847a509174598201364');
+"19,847a509174598201364"
+// 콤마 삽입
+// /(^[+-]?\d+)(\d{3})/
+var pattern = /(^[+-]?\d+)(\d{3})/
+function insertComma(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, '$1'+ ',' + '$2');
+	}
+	return str;
+}
+
+insertComma('19a8a47a509174598201364');
+"19a8a47a509174598201364"
+"129831723618273618641826491826497".match(/(^[+-]?\d+)(\d{3})/)
+["129831723618273618641826491826497", "129831723618273618641826491826", "497"]
+"12345826497".match(/(^[+-]?\d+)(\d{3})/)
+["12345826497", "12345826", "497"]
+"+12345826497".match(/(^[+-]?\d+)(\d{3})/)
+["+12345826497", "+12345826", "497"]
+// 코딩 문제
+var pattern = /(^\w+)(\w{4})/
+function insertHash(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		debugger;
+		str = str.replace(pattern, $1'+ '##' + '$2');
+	}
+	return str;
+}
+
+insertHash('AD19AD8AWDA4750ASda9174ASfAfAWasdADf9820AD364');
+Uncaught SyntaxError: missing ) after argument list(…)
+var pattern = /(^\w+)(\w{4})/;
+function insertHash(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, $1'+ '##' + '$2');
+	}
+	return str;
+}
+
+insertHash('AD19AD8AWDA4750ASda9174ASfAfAWasdADf9820AD364');
+
+Uncaught SyntaxError: missing ) after argument list(…)
+'AD19AD8AWDA4750ASda9174ASfAfAWasdADf9820AD364'.match(/(^\w+)(\w{4})/)
+["AD19AD8AWDA4750ASda9174ASfAfAWasdADf9820AD364", "AD19AD8AWDA4750ASda9174ASfAfAWasdADf9820A", "D364"]
+var pattern = /(^\w+)(\w{4})/;
+function insertHash(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, $1'+ '##' + '$2');
+	}
+	return str;
+};
+Uncaught SyntaxError: missing ) after argument list(…)
+// 코딩 문제
+var pattern = /(^\w+)(\w{4})/;
+function insertHash(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, '$1'+ '##' + '$2');
+	}
+	return str;
+};
+
+insertHash('AD19AD8AWDA4750ASda9174ASfAfAWasdADf9820AD364');
+
+"A##D19A##D8AW##DA47##50AS##da91##74AS##fAfA##Wasd##ADf9##820A##D364"
+// 코딩 문제
+var pattern = /(^\w+)(\w{4})/;
+function insertHash(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, '$1'+ '##\n' + '$2');
+	}
+	return str;
+};
+
+insertHash('AD19AD8AWDA4750ASda9174ASfAfAWasdADf9820AD364');
+
+"A##
+D19A##
+D8AW##
+DA47##
+50AS##
+da91##
+74AS##
+fAfA##
+Wasd##
+ADf9##
+820A##
+D364"
+// 코딩 문제
+var pattern = /(^\w+)(\w{4})/;
+function insertHash(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, '$1'+ '\n##' + '$2');
+	}
+	return str;
+};
+
+insertHash('AD19AD8AWDA4750ASda9174ASfAfAWasdADf9820AD364');
+
+"A
+##D19A
+##D8AW
+##DA47
+##50AS
+##da91
+##74AS
+##fAfA
+##Wasd
+##ADf9
+##820A
+##D364"
+// 코딩 문제
+var pattern = /(^\w+)(\w{4})/;
+function insertHash(value){
+	var str = value.toString();
+	while (pattern.test(str)){
+		str = str.replace(pattern, '$1'+ '\n##' + '$2');
+	}
+	return str;
+};
+
+insertHash('_AD19_AD8AWDA4750ASda9174ASfAfAWasdADf9820AD364_');
+
+"_AD1
+##9_AD
+##8AWD
+##A475
+##0ASd
+##a917
+##4ASf
+##AfAW
+##asdA
+##Df98
+##20AD
+##364_"
+insertHash('2kj2');
+
+"2kj2"
+insertHash('2kj2a');
+
+"2
+##kj2a"
+insertHash('_AD19_AD8AWDA4750ASda9174ASfAfAWasdADf9820snefnjl88f d9fef8h9h98h9ahf98 9hafAD364_');
+"_AD1
+##9_AD
+##8AWD
+##A475
+##0ASd
+##a917
+##4ASf
+##AfAW
+##asdA
+##Df98
+##20sn
+##efnj
+##l88f d9fef8h9h98h9ahf98 9hafAD364_"
+"swim".match(/swiA?m/)
+["swim"]
+"swiAm".match(/swiA?m/)
+["swiAm"]
+"swiAAm".match(/swiA?m/)
+null
+"swiAAm".match(/swiA?i/)
+null
+"swim".match(/swiA?i/)
+null
+"swim".match(/swiA?/)
+["swi"]
+"swim".match(/swiA?m/)
+["swim"]
+"swim".match(/swiA?i/)
+null
+"swim".match(/swi?i/)
+["swi"]
+"swim".match(/s.*?/)
+["s"]
+"swim".match(/s.*?m/)
+["swim"]
+"swim".match(/s.*/)
+["swim"]
+"swim".match(/s.*?/)
+["s"]
+"swim".match(/ss.*?/)
+null
+"swim".match(/sW.*?/)
+null
+"swim".match(/sw.*?/)
+["sw"]
+"swim".match(/s.*?/)
+["s"]
+"swim".match(/.*?/)
+[""]
+"swim".match(/s.*?/g)
+["s"]
+"swim".match(/.*?/g)
+["", "", "", "", ""]
+"swim".match(/s.*?/)
+["s"]
+"swim".match(/s.*?m/)
+["swim"]
+"aaaac".match(/aa+/)
+["aaaa"]
+"aaaac".match(/aa+?/)
+["aa"]
+undefined
+"aaaac".match(/aa+/);
+"aaaac".match(/aa+?/);
+["aa"]
+"aaaac".match(/aa+/);
+["aaaa"]
+"aaaac".match(/aa+?/);
+["aa"]
+"aaaac".match(/aa*?/);
+["a"]
+"swim".match(/s.*?/)
+["s"]
+"swim".match(/s.*?m/)
+["swim"]
+"swim".match(/s*?/)
+[""]
+"swim".match(/sw*m/)
+null
+"swim".match(/s*m/)
+["m"]
+"swim".match(/s*m/g)
+["m"]
+"swim".match(/s?m/g)
+["m"]
+"swim".match(/s+m/g)
+null
+'aabaac'.match(/(aa|aabaac|b)/)
+["aa", "aa"]
+'aabaac'.match(/(aa|aabaac|b)/g)
+["aa", "b", "aa"]
+'aabaac'.match(/(aa|aabaac|b)*/)
+["aabaa", "aa"]
+'aabaac'.match(/(aa|aabaac|b)*/g)
+["aabaa", "", ""]
+'aabaac'.match(/(aabaac|aa|b)*/g)
+["aabaac", ""]
+'aabaac'.match(/(aabaac|aa|b)/g)
+["aabaac"]
+'aabaac'.match(/(aabaac|aa|b)/)
+["aabaac", "aabaac"]
+'aabaac'.match(/(aa|aabaac|b)/)
+["aa", "aa"]
+'aabaac'.match(/(aa|aabaac|b)*/)
+["aabaa", "aa"]
+'aabaaaac'.match(/(aa|aabaac|b)*/)
+["aabaaaa", "aa"]
+'aabaacaac'.match(/(aa|aabaac|b)*/)
+["aabaa", "aa"]
+'aabaacaab'.match(/(aa|aabaac|b)*/)
+["aabaa", "aa"]
+'aabacaab'.match(/(aa|abaac|b)*/)
+["aab", "b"]
+'aababaac'.match(/(aa|abaac|b)*/)
+["aababaac", "abaac"]
+'aabaabaac'.match(/(aa|abaac|b)*/)
+["aabaabaa", "aa"]
+"aabkkcd".match(/(aa|ba|b|c/)
+Uncaught SyntaxError: Invalid regular expression: /(aa|ba|b|c/: Unterminated group(…)
+"aabkkcd".match(/(aa|ba|b|c)/);
+["aa", "aa"]
+"aabkkcd".match(/(aa|ba|b|c)*/);
+["aab", "b"]
+"aabaac".match(/(aa|ba|b|c)*/);
+["aaba", "ba"]
+"aabacba".match(/(aa|ba|b|c)*/);
+["aabacba", "ba"]
+"aabacbac".match(/(aa|ba|b|c)*/);
+["aabacbac", "c"]
+"aabacbacaa".match(/(aa|ba|b|c)*/);
+["aabacbacaa", "aa"]
+"aaaabacbacaa".match(/(aa|aaba|b|c)*/);
+["aaaab", "b"]
+"aabacbacaa".match(/(aa|aaba|b|c)*/);
+["aab", "b"]
+"aabacb".match(/(aa|aaba|b|c)*/);
+["aab", "b"]
+"aabacb".match(/(aaba|aa||b|c)*/);
+["aabacb", "b"]
+"aabacb".match(/(aaba|aa|b|c)*/);
+["aabacb", "b"]
+"abcdef".match(/ab(?:cd)ef/)
+["abcdef"]
+"abcdef".match(/ab(cd)ef/)
+["abcdef", "cd"]
+RegExp.$1
+"cd"
+RegExp.$_
+"abcdef"
+"abcdef".match(/ab(?:cd)ef/)
+["abcdef"]
+RegExp.$_
+"abcdef"
+RegExp.$1
+""
+"abcc".match(/ab(?=c)/)
+["ab"]
+"abcc".match(/ab(?=c)*/)
+["ab"]
+"abcc".match(/ab(?=c)/)
+["ab"]
+"abdcc".match(/ab(?=c)/)
+null
+"abdcc".match(/ab(?=d)c/)
+null
+"abdcc".match(/ab(?=d)cc/)
+null
+"abdcc".match(/ab(?=d)/)
+["ab"]
+"abdcc".match(/ab(?=d)d/)
+["abd"]
+"abdcc".match(/ab(?=d)dcc/)
+["abdcc"]
+"abcdef".match(/ab(?!ef)/)
+["ab"]
+"abcdef".match(/ab(?!cd)/)
+null

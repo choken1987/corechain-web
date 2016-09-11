@@ -1,0 +1,433 @@
+Failed to load resource: net::ERR_BLOCKED_BY_CLIENT
+"12A".match(/12\b/)
+null
+"12A".match(/12\B/)
+["12"]
+'first\u000aStart\u000aStart'.match(/a/)
+
+["a"]
+'first\u000aStart\u000aStart'.match(/^Start/)
+
+null
+'first\u000aStart\u000aStart'.match(/^Start/m)
+
+["Start"]
+'first\u000aStart\u000aStart'.match(/^Start/mg)
+
+["Start", "Start"]
+'first\u000aStart\u000aStart'.match(/^Start/mgi)
+
+["Start", "Start"]
+'first\u000aStart\u000aStart\u000astart'.match(/^Start/mgi)
+
+["Start", "Start", "start"]
+'first\u000aStart\u000aStart\u000astart'.match(/^Start/mg)
+
+["Start", "Start"]
+'first\u000aStart\u000aStart\u000astart'.match(/^Start/g)
+
+null
+'first\u000aStart\u000aStart\u000astart'.match(/^Start/mg)
+
+["Start", "Start"]
+'first\u000aStart\u000aStart\u000astart'.match(/Start/)
+
+["Start"]
+'first\u000aStart\u000aStart\u000astart'.match(/Start/g)
+
+["Start", "Start"]
+'first\u000aStart\u000aStart\u000astart'.match(/Start/mg)
+
+["Start", "Start"]
+'first\u000aStart\u000aStart\u000astart'.match(/Start/gi)
+
+["Start", "Start", "start"]
+'first\u000a Start\u000aStart\u000astart'.match(/Start/gi)
+
+["Start", "Start", "start"]
+'first\u000a Start\u000aStart\u000astart'.match(/^Start/gi)
+
+null
+'first\u000a Start\u000aStart\u000astart'.match(/^Start/mgi)
+
+["Start", "start"]
+'first\u000a Start\u000aStart\u000astart'.match(/^Start/mg)
+
+["Start"]
+'first\u000aaaStart\u000aStart\u000astart'.match(/^Start/mg)
+
+["Start"]
+'first\u000aStart\u000aStart\u000astart'.match(/^Start/mg)
+
+["Start", "Start"]
+"a12b 12d e12f".match(/\b12/b/)
+Uncaught SyntaxError: Unexpected token )(…)
+"a12b 12d e12f".match(/\b12\b/)
+null
+"a12b 12d e12f".match(/\b12\b/m)
+null
+"a12b 12d e12f".match(/\B12\B/m)
+["12"]
+"a12b 12d e12f".match(/\B12\B/)
+["12"]
+"a12b 12d e12f".match(/\B12\B/g)
+["12", "12"]
+"ab abab.abab".match(/\bab/)
+["ab"]
+"ab abab.abab".match(/\bab/g)
+["ab", "ab", "ab"]
+"ab abab.abab".match(/\Bab/g)
+["ab", "ab"]
+"ab abab.abab".match(/\Bab/g).index
+undefined
+"ab abab.abab".match(/\Bab/g)
+["ab", "ab"]
+var a = "ab abab.abab".match(/\Bab/g)
+undefined
+a
+["ab", "ab"]
+typeof a
+"object"
+a.input
+undefined
+a.index
+undefined
+var result = "34_12_56".match(/12/)
+undefined
+result
+["12"]
+result.index
+3
+result.input
+"34_12_56"
+function returnPattern(){
+    return /sp/g;
+}
+"문자열".match(returnPattern());
+null
+function returnPattern(){
+    return /sp/g;
+}
+"sp sp ps pspps psp psp".match(returnPattern());
+["sp", "sp", "sp", "sp", "sp"]
+function returnPattern(){
+    return /sp/g;
+}
+"sp sp ps pspps psp psp".match(returnPattern()).index;
+undefined
+function returnPattern(){
+    return /sp/;
+}
+"sp sp ps pspps psp psp".match(returnPattern()).index;
+0
+function returnPattern(){
+    return /sp/;
+}
+"sp sp ps pspps psp psp".match(returnPattern()).input;
+"sp sp ps pspps psp psp"
+"CD_AB_EF".search(/AB/);
+"CD_AB_AB".search(/AB/g);
+"AB_CD_CD".search(/CD$/);
+"AB_CD".search(/EF/g);
+-1
+"CD_AB_EF".search(/AB/);
+3
+"CD_AB_AB".search(/AB/g);
+3
+"AB_CD_CD".search(/CD$/);
+6
+"AB_CD".search(/EF/g);
+-1
+"12_34_56".split('_')
+["12", "34", "56"]
+"12_34_56".split('')
+["1", "2", "_", "3", "4", "_", "5", "6"]
+"12_34_56".split('S')
+["12_34_56"]
+"12_34_56".split()
+["12_34_56"]
+"12_34_56".split('', 1)
+["1"]
+"12_34_56".split('', 3)
+["1", "2", "_"]
+"12_34_56".split('', 10)
+["1", "2", "_", "3", "4", "_", "5", "6"]
+"12a34a56".split(/(A)/)
+["12a34a56"]
+"12a34a56".split('_', 2)
+["12a34a56"]
+"12a34a56".split(/(A)/)
+["12a34a56"]
+"12a34a56".split(/(B)/)
+["12a34a56"]
+"12a34a56".split(/(a)/)
+["12", "a", "34", "a", "56"]
+console.log("------------------------------------------")
+------------------------------------------
+undefined
+"12_34_12".replace('12', 89)
+"89_34_12"
+"12_34_12".replace(/12/g, 89)
+"89_34_89"
+"12_34_12".replace(/12/g, function(){return 'aa';}())
+"aa_34_aa"
+/12/.test('12_34_12')
+true
+/12/.exec('12_34_12')
+["12"]
+/12/.exec('12_34_12').index
+0
+/12/.exec('12_34_12').input
+"12_34_12"
+/12/g.exec('12_34_12').input
+"12_34_12"
+/12/g.exec('12_34_12')
+["12"]
+Uncaught TypeError: Cannot read property 'impl' of undefined
+'Range.detach' is now a no-op, as per DOM (http://dom.spec.whatwg.org/#dom-range-detach).
+Uncaught TypeError: Cannot read property 'impl' of undefined
+Uncaught TypeError: Cannot read property 'impl' of undefined
+"aaac".match(/a+/);
+["aaa"]
+"aaac".match(/a+/).input;
+"aaac"
+"aaac".match(/a+/).index;
+0
+"aaac aac".match(/a+/).index;
+0
+"aaac aac".match(/a+/);
+["aaa"]
+"aaac aac".match(/a+/g);
+["aaa", "aa"]
+"aaac aac".match(/a+/g).input;
+undefined
+"aaac aac".match(/a+/g).index;
+undefined
+"aaac aac".match(/a+/).input;
+"aaac aac"
+"aaac aac".match(/a+/).index;
+0
+"aaac aac".match(/a+./g);
+["aaac", "aac"]
+"aaac aac".match(/a+\b/g);
+null
+"aaac aac".match(/a+\B/g);
+["aaa", "aa"]
+"aaac aac".match(/.+/g);
+["aaac aac"]
+"aaac aac".match(/\B+/g);
+Uncaught SyntaxError: Invalid regular expression: /\B+/: Nothing to repeat(…)
+"aaac aac".match(/\b+/g);
+Uncaught SyntaxError: Invalid regular expression: /\b+/: Nothing to repeat(…)
+"aaac aac".match(/\b/g);
+["", "", "", ""]
+"aaac aac".match(/\B/g);
+["", "", "", "", ""]
+"aaac aac".match(/(\b)/g);
+["", "", "", ""]
+"aaac aac".match(/(\B)/g);
+["", "", "", "", ""]
+"aaac aac".match(/.+/g);
+["aaac aac"]
+/\d+/.test(1234);
+true
+/\d+/.test('1234');
+true
+/\d+/.test('AA1234');
+true
+/^\d+/.test('AA1234');
+false
+/^\d+$/.test('AA1234');
+false
+/^\d+$/.test('1AAa');
+false
+/^\d+$/.test('1AA1');
+false
+/^\d+$/.test('1221');
+true
+/^\d+$/.test('1231');
+true
+var check = function(str) {
+	return /^\d+$/.test(str);
+}
+
+var list = ['1234', '1234aa', 'aa1234', ' '];
+for ( int i = 0; i < list.length; i++ ){
+	check(list[i]);
+}
+Uncaught SyntaxError: Unexpected identifier(…)
+var check = function(str) {
+	return /^\d+$/.test(str);
+}
+undefined
+var list = ['1234', '1234aa', 'aa1234', ' '];
+for ( int i = 0; i < list.length; i++ ){
+	check(list[i]);
+}
+Uncaught SyntaxError: Unexpected identifier(…)
+var list = ['1234', '1234aa', 'aa1234', ' '];
+for ( var i = 0; i < list.length; i++ ){
+	check(list[i]);
+}
+false
+for ( var i = 0; i < list.length; i++ ){
+	check(list[i]);
+}
+false
+for ( var i = 0; i < list.length; i++ ){
+	console.log(check(list[i]));
+}
+true
+false
+undefined
+var list = ['1234', '1234aa', 'aa1234', ' '];
+for ( var i = 0; i < list.length; i++ ){
+	console.log(check(list[i]));
+}
+true
+false
+undefined
+// 숫자만 입력 체크
+var check = function(str) {
+	return /^\d+[4]$/.test(str);
+}
+
+var list = ['1234', '123', '12', '1234aa', 'aa1234', ' '];
+for ( var i = 0; i < list.length; i++ ){
+	console.log(check(list[i]));
+}
+true
+false
+undefined
+// 숫자만 입력 체크
+var check = function(str) {
+	return /^\d+$/.test(str);
+}
+
+var list = ['1234', '123', '12', '1234aa', 'aa1234', ' '];
+for ( var i = 0; i < list.length; i++ ){
+	console.log(check(list[i]));
+}
+true
+false
+undefined
+// 숫자만 입력 체크
+var check = function(str) {
+	return /^\d+[3,4]$/.test(str);
+}
+
+var list = ['1234', '123', '12', '1234aa', 'aa1234', ' '];
+for ( var i = 0; i < list.length; i++ ){
+	console.log(check(list[i]));
+}
+true
+false
+undefined
+Uncaught TypeError: Cannot read property 'impl' of undefined
+"abcAB".match(/.+AB/)
+["abcAB"]
+Uncaught TypeError: Cannot read property 'impl' of undefined
+"abcAB".match(/.+/)
+["abcAB"]
+"abcAB".match(/.+AB/)
+["abcAB"]
+"abcAB".match(/.+B/)
+["abcAB"]
+"abcAB".match(/.+ㅁ/)
+null
+"abcAB".match(/.+A/)
+["abcA"]
+"abcAB".match(/.+AB/)
+["abcAB"]
+"abcAB".match(/.+A$B/)
+null
+"abcAB".match(/.+AB$/)
+["abcAB"]
+"abcAB".match(/.+$AB/)
+null
+"abcAB".match(/.+AB/)
+["abcAB"]
+"abcAB".match(/.+/)
+["abcAB"]
+"abcAB".match(/.+A./)
+["abcAB"]
+"abcAB".match(/.+A.+/)
+["abcAB"]
+"12A".match(/12C/)
+null
+"12A".match(/12C*/)
+["12"]
+"12AC".match(/12C*/)
+["12"]
+"12CAC".match(/12C*/)
+["12C"]
+"12CCAC".match(/12C*/)
+["12CC"]
+/12C*/.exec('12CCAC')
+["12CC"]
+/12C*/.exec('12AC')
+["12"]
+/12C*/.exec('12AAC')
+["12"]
+/12C*/.exec('12ACAC')
+["12"]
+/12C*/.exec('12CACAC')
+["12C"]
+"AAAC".match(/A*/)
+["AAA"]
+"AABAAAC".match(/A*/)
+["AA"]
+"12AB_12EFG".match(/12C*/)
+["12"]
+"123AB_12EFG".match(/123C*/)
+["123"]
+"ABC_123".match(/123C*/)
+["123"]
+Uncaught TypeError: Cannot read property 'impl' of undefined
+"123aaaaa".match(/123a?/)
+["123a"]
+"123aaaaa".match(/123a*/)
+["123aaaaa"]
+"123".match(/123a*/)
+["123"]
+"123".match(/123a?/)
+["123"]
+"123SSSK".match(/123S*K/)
+["123SSSK"]
+"123SSSK".match(/123S+K/)
+["123SSSK"]
+"123SSSK".match(/123S?K/)
+null
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split('');
+["f", "l", "s", "n", "f", "l", "s", "e", "f", " ", "j", "a", "s", "l", "f", "n", "s", "e", "f", ";", " ", "n", "a", "s", ";", "e", "j", "f", "k", " ", "n", "a", "e", "f", "l", " ", "s", "a", "n", "f", "j", "n", "s", "f"]
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split(//);
+Uncaught SyntaxError: Unexpected token }(…)
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split(/a/);
+["flsnflsef j", "slfnsef; n", "s;ejfk n", "efl s", "nfjnsf"]
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split(/(a)/);
+["flsnflsef j", "a", "slfnsef; n", "a", "s;ejfk n", "a", "efl s", "a", "nfjnsf"]
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split(/(a)(s)/);
+["flsnflsef j", "a", "s", "lfnsef; n", "a", "s", ";ejfk naefl sanfjnsf"]
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split(/(a)(?:s)/);
+["flsnflsef j", "a", "lfnsef; n", "a", ";ejfk naefl sanfjnsf"]
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split(/(s)(a)(?:s)/);
+["flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf"]
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split(/(:s)(a)(?:s)/);
+["flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf"]
+"flsnflsef jaslfnsef; nas;ejfk naefl sanfjnsf".split(/(a)(?:s)/);
+["flsnflsef j", "a", "lfnsef; n", "a", ";ejfk naefl sanfjnsf"]
+"AAAK".match(/A{2}K?/)
+["AA"]
+"AAAK".match(/A{2}K/)
+["AAK"]
+"AAAK".match(/A{2}K/).index
+1
+"AAAK".match(/A{2}K?/).index
+0
+"AAAK".match(/A{2}/).index
+0
+"AAAK".match(/A{2}$/).index
+Uncaught TypeError: Cannot read property 'index' of null(…)
+"AAAK".match(/$A{2}/).index
+Uncaught TypeError: Cannot read property 'index' of null(…)
+"AAAK".match(/A{2}$/)
