@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+</head>
+<body>
+<div id="target"></div>
+<script type="text/javascript">
+
+/*
+ */
+var log = function log(arg){
+	console.log(arguments);
+}
+
+
+var obj = {};
+
+/*
+ */
+(function (){
+	Object.defineProperty(obj, "book", {value:1});
+	log(obj.book);
+
+	Object.defineProperty(obj, "cook", {
+		get: function(){
+			return "cookk";
+		}
+	});
+	log(obj.cook);
+
+	obj.cook = 'cokkkk';
+	log(obj.cook);
+
+	var bookValue = {};
+	Object.defineProperty(obj, "hi", {
+		get: function(){
+			return bookValue;
+		},
+		set: function(param){
+			bookValue = param;
+		}
+	});
+
+	log(obj.hi);
+})();
+
+</script>
+</body>
+<html>

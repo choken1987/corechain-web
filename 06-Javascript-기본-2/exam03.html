@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+</head>
+<body>
+<div id="target"></div>
+<script type="text/javascript">
+
+var content = [];
+
+for (var i = 0; i < 10; i++) {
+	if(i==0){content.push("<ul>");}
+//	content.push("<li id="+(i+1)+">"+(i+1)+"</li>");
+	var temp = "<li id=#id#>#text#</li>"
+		.replace('#id#', i+1)
+		.replace('#text#', i+1);
+	content.push(temp);
+	if(i==9){content.push("</ul>");}
+};
+//content.join()
+content = content.join('');
+(function (){
+
+// document.getElementById("target").innerHTML(renderContents);
+document.getElementById("target").innerHTML = content;	
+
+})();
+</script>
+</body>
+<html>

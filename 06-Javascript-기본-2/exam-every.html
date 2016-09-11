@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+</head>
+<body>
+<div id="target"></div>
+<script type="text/javascript">
+
+var funcA = function(element, index, list){
+	log('value : '+element);
+//	return element > 15;
+	return element < 15;
+}
+var funcB = function(){
+}
+var funcMap = function(element, index, list){
+	return element * 10;
+}
+var funcReduce1 = function(previous, current, currentIndex, list){
+	log('previous : ' + previous + ', current : ' + current + ', currentIndex : ' + currentIndex + ', list : ' + list);
+//	return previous - current;
+	return log(previous - current);
+}
+var log = function log(arg){
+	console.log(arg);
+//	return arg;
+}
+var value = [1,2,30,4,10,15,1,20,3,4];
+	value = [10,20,30,40];
+/*
+ */
+(function (){
+	
+//	value.every(funcA);
+
+//	value.some(funcA);
+	
+//	log(value.filter(funcA, 'a'){
+//		log('this : ' + this.a);
+//	});
+
+//	log(value.map(funcMap));
+
+//	log(value.reduce(funcReduce1));
+
+//	log(value.reduce(funcReduce1, 1000));
+
+//	log(value.reduceRight(funcReduce1, 1000));
+
+//	log(value.indexOf(30));
+
+	log(value.lastIndexOf(30), 1);
+
+})();
+
+</script>
+</body>
+<html>

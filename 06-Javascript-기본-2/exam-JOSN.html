@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+</head>
+<body>
+<div id="target"></div>
+<script type="text/javascript">
+
+//
+var log = function log(arg){
+//	console.log(arg);
+//	return arg;
+	console.log(arguments)
+}
+
+var funcB = function(){
+}
+
+//
+var val = [1,2,30,4,10,15,1,20,3,4];
+	val = [10,20,30,40];
+
+//
+//var obj = [
+//	"ABC", "true", "TRUE", "false", "FALSE"
+//]
+
+//
+//var result = JSON.parse(obj);
+
+	var json = '{"soccer":"55","ball":"22","foot":"999"}';
+/*
+ */
+(function (){
+//	for (var i = 0; i < result.length; i++){
+//		log(result[i]);
+//	}
+
+//	var result = JSON.parse(json);
+//	log(result);
+//	for (var name in result){
+//		log(name, result[name]);
+//	}
+
+/**/
+	var result = JSON.parse(json, function(key, value){
+		return key === 'ball' ? 11 : value;
+	//	return 99;
+	//	return '99';
+	});
+	log(result);
+	for (var key in result){
+		//log(key, result[key]);
+		console.log(key, result[key]);	
+	}
+
+/**/
+	console.log(JSON.stringify(Infinity, NaN, null, true, false));
+
+/**/
+	var obj = {
+		sprots: 'soccer'
+		, player: 11
+		, time: 90
+	},['sprots', 'time'];
+	log(JSON.stringify(JOSN.parse(obj)));
+
+/**/
+	console.log(JSON.stringify({sports:'soccer',player:11},'','\r'));
+	console.log(JSON.stringify({sports:'soccer',player:11},'',4));
+	console.log(JSON.stringify({sports:'soccer',player:11},'','####'));
+
+
+})();
+
+</script>
+</body>
+<html>

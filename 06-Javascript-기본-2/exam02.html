@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+
+
+<script type="text/javascript">
+// indexOf, lastIndexOf
+// 발생 가능한 경우를 기술
+// 이에 맞는 코드를 작성
+
+var cnt = 0;
+
+var str = '123234345456567';
+
+var cStr = '';
+var cIndex = null;
+cStr = '3';
+cIndex = null;
+check(str, cStr, cIndex);
+
+cStr = '3';
+cIndex = 0;
+check(str, cStr, cIndex);
+
+cStr = '3';
+cIndex = null;
+check(str, cStr, cIndex);
+
+cStr = '3';
+cIndex = true;
+check(str, cStr, cIndex);
+
+cStr = '3';
+cIndex = false;
+check(str, cStr, cIndex);
+
+
+
+
+//
+function check(str, cStr, cIndex){
+	log(str.indexOf(cStr));
+	log(str.lastIndexOf(cStr));
+	log(str.indexOf(cStr, cIndex));
+	log(str.lastIndexOf(cStr, cIndex));
+	log('---'+ (++cnt) +'---');
+}
+
+
+//
+function log(arg){
+	console.log(arg);
+}
+
+</script>
+</head>
+<body>
+</body>
+<html>

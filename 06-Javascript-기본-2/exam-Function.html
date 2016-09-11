@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='ko'>
+<head>
+</head>
+<body>
+<div id="target"></div>
+<script type="text/javascript">
+
+/*
+ */
+var log = function log(arg){
+	console.log(arguments);
+}
+
+var fnCallA = function(){
+	console.log('a');
+	console.log(this);
+	console.log(arguments.toString());
+}
+
+var fnCallB = function(){
+	console.log('b');
+}
+
+var str = 'return book 1 + 2';
+/*
+ */
+(function (){
+//	var fnA = new Function(str);
+//	log(fnA);
+
+	fnCallA.call('aa',1,2,3);
+	fnCallB.call(this);
+
+})();
+
+</script>
+</body>
+<html>
