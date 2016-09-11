@@ -442,14 +442,6 @@
     </div>
     <!--  -->
 
-
-
-
-
-
-
-
-
     <!--  -->
     <div class="">
       <h6>animateMotion</h6>
@@ -459,27 +451,103 @@
     </div>
     <div class="">
       <svg width="120" height="120"  viewBox="0 0 120 120"
-           xmlns="http://www.w3.org/2000/svg" version="1.1"
-           xmlns:xlink="http://www.w3.org/1999/xlink" >
+      xmlns="http://www.w3.org/2000/svg" version="1.1"
+      xmlns:xlink="http://www.w3.org/1999/xlink" >
 
-          <!-- Draw the outline of the motion path in grey, along
-               with 2 small circles at key points -->
-          <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
-                stroke="lightgrey" stroke-width="2"
-                fill="none" id="theMotionPath"/>
-          <circle cx="10" cy="110" r="3" fill="lightgrey"  />
+      <!-- Draw the outline of the motion path in grey, along
+      with 2 small circles at key points -->
+      <path d="M10,110 A120,120 -45 0,1 110 10 A120,120 -45 0,1 10,110"
+      stroke="lightgrey" stroke-width="2"
+      fill="none" id="theMotionPath"/>
+      <circle cx="10" cy="110" r="3" fill="lightgrey"  />
 
-          <!-- Here is a red circle which will be moved along the motion path. -->
-          <circle cx="" cy="" r="5" fill="red">
+      <!-- Here is a red circle which will be moved along the motion path. -->
+      <circle cx="" cy="" r="5" fill="red">
 
-              <!-- Define the motion path animation -->
-              <animateMotion dur="6s" repeatCount="indefinite">
-                 <mpath xlink:href="#theMotionPath"/>
-              </animateMotion>
-          </circle>
+        <!-- Define the motion path animation -->
+        <animateMotion dur="6s" repeatCount="indefinite">
+          <mpath xlink:href="#theMotionPath"/>
+        </animateMotion>
+      </circle>
       </svg>
     </div>
     <!--  -->
+
+    <!-- 20160416 -->
+
+    <!-- Event; onbegin="fnOnbegin", onend="fnOnEnd" -->
+
+    <!-- Event; begin="click", restart="whenNotActive" -->
+
+    <!-- Syncbase; begin="first.end", begin="second.end" -->
+
+    <!-- anchor 연동 -->
+    <div class="">
+      <svg width=300 height=300>
+        <!-- <a xlink:href="#id1"> -->
+        <g id="id1">
+          <rect x=10 y=100 width=100 height=30 fill=yellow />
+          <text x=60 y=120 text-anchor=middle>click</text>
+        </g>
+        <!-- </a> -->
+        <rect x=10 y=150 width=100 height=70 fill=blue>
+          <!-- <animate attributeName=x id="id1" begin=indefinite to=200 dur=2s fill=freeze /> -->
+          <animate attributeName=x begin="#id1.click" to=200 dur=2s fill=freeze />
+        </rect>
+      </svg>
+    </div>
+
+    <!-- Repeat; repeatCount="indefinite", repeatDur="6s" -->
+
+    <!-- additive="sum"; 차이를 반영  -->
+
+    <!-- keyTimes -->
+    <div class="">
+      <svg width="120" height="120"
+           viewPort="0 0 120 120" version="1.1"
+           xmlns="http://www.w3.org/2000/svg">
+
+          <circle cx="60" cy="10" r="10">
+
+              <animate attributeName="cx"
+                       attributeType="XML"
+                       dur="4s"
+                       values="60 ; 110 ; 60 ; 10 ; 60"
+                       keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
+                       repeatCount="indefinite"/>
+
+              <animate attributeName="cy"
+                       attributeType="XML"
+                       dur="4s"
+                       values="10 ; 60 ; 110 ; 60 ; 10 "
+                       keyTimes="0 ; 0.25 ; 0.5 ; 0.75 ; 1"
+                       repeatCount="indefinite"/>
+
+          </circle>
+      </svg>
+    </div>
+
+    <!-- calcMode; linear, paced, discrete -->
+    <!-- calcMode = "discrete | linear | paced | spline" -->
+    <!-- https://www.w3.org/TR/SVG/animate.html#CalcModeAttribute -->
+    <!-- keySplines = "<list>" -->
+
+    <div class="">
+      <svg width="400" height="500">
+        <g id="id1">
+          <rect x="10" y="140" width="100" heigth="30" fill="yellow" />
+          <text x-"60" y="160" text-anchor="middle">click</text>
+        </g>
+
+        <path id="idpath" d="M20,20 L170,70 20" />
+
+        <circle>
+
+        </circle>
+
+      </svg>
+    </div>
+
 
 
   </body>
