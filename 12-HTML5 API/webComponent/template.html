@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <!--  -->
+    <!--  -->
+    <div class="">
+      <table>
+        <thead>
+          <tr>
+            <th>
+              한글
+            </th>
+            <th>
+              영어
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <!--  -->
+          <template id="row">
+            <tr>
+              <caption></caption>
+              <td>
+              </td>
+              <td>
+              </td>
+            </tr>
+            <!--  -->
+            <script type="text/javascript">
+            (function(){
+              debugger;
+              var caption = document.querySelector('caption');
+              caption.textContent = ++window.rowTotal;
+            })();
+            </script>
+            <!--  -->
+            <!--  -->
+            <style>
+              .shadow {
+                color: red;
+              }
+            </style>
+            <!--  -->
+            <!--  -->
+            <div class="shadow">
+              <content select=""></content>
+            </div>
+            <!--  -->
+          </template>
+          <!--  -->
+        </tbody>
+      </table>
+    </div>
+    <script type="text/javascript">
+    window.onload = function() {
+
+      var data = [];
+      data.push({kor: '하늘', eng: 'sky'});
+      data.push({kor: '바다', eng: 'sea'});
+      data.push({kor: '산', eng: 'mountain'});
+
+      window.rowTotal = 0; // global valuable
+
+      var i, obj, fragment, cells,
+        template = document.querySelector('#row');
+
+      for (var i = 0; i < data.length; i++) {
+        debugger;
+        obj = data[i];
+        fragment = template.content.cloneNode(true); // template.content.cloneNode
+        cells = fragment.querySelectorAll('td');
+        cells[0].textContent = obj.kor;
+        cells[1].textContent = obj.eng;
+        template.parentNode.appendChild(fragment); // template.parentNode.appendChild
+      }
+
+      // shadow document
+      // https://developer.mozilla.org/en-US/docs/Web/Web_Components/Shadow_DOM
+      document.getElementById('buttonID').onclick = function(event) {
+
+        var showNode = document.getElementById('show');
+
+        // createShadowRoot
+        // 해당  shadow root 안에서만 styele 적용
+        var root = showNode.createShadowRoot(); //
+
+        var template = document.getElementById('templateID');
+
+        var fragment = template.content.cloneNode(true); // true; childNode
+        // cloneNode vs importNode
+
+        root.appendChild(fragment);
+      }
+
+      // custom element
+      // https://developer.mozilla.org/en-US/docs/Web/Web_Components/Custom_Elements
+      var proto = Object.create(HTMLElement.prototype, {
+      // var proto = Object.create(HTMLButtonElement.prototype, {
+        // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create
+        customAttr: {
+          get: function() {
+            return this.getAttribute('customAttr'); //
+          },
+          set: function() {
+            this.setAttribute('customAttr'); //
+          },
+        }
+      }); // prototype
+      var customNode = document.registerElement('x-custom', {prototype: proto}); // custom element
+      var newNode = new customNode();
+
+      //
+      var customButton = document.registerElement('x-custom', {prototype: proto, extends: 'button'});
+
+    }
+    </script>
+    <!--  -->
+
+  </body>
+</html>

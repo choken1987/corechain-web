@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="log.js" charset="utf-8"></script>
+  </head>
+  <body>
+
+    <!-- FileReader.readAsText() ->
+    <!--  -->
+    <div class="">
+      <label>파일 선택<input type="file" id="fileID"></label>
+    </div>
+    <script type="text/javascript">
+    var node = document.getElementById('fileID');
+    node.onchange = function(event) {
+      debugger;
+      var fileReader = new FileReader();
+      // Event handler
+      // fileReader.onloadend = function(event) {
+      fileReader.onloadend = function() {
+        debugger;
+        // DONE; 2
+        if(event.target.readyState == FileReader.DONE) {
+          var lines = fileReader.result.split(/\n|\r/g);
+          for (var i = 0; i < lines.length; i++) {
+            if (lines[i]) {
+              console.log(lines[i]);
+            }
+          }
+        }
+      }
+    }
+    </script>
+    <!--  -->
+
+    <!-- readAsDataURL -->
+    <!--  -->
+    <div class="">
+      <label for="">이미지 파일 선택 <input type="file" name="name" value="" accept="image/*" id="fileID"></label>
+    </div>
+    <div class="" id="show">
+    </div>
+    <script type="text/javascript">
+    var node = document.getElementById('fileID');
+    node.onchange = function(event) {
+      debugger;
+      var obj = new FileReader(); //
+      obj.onloadend = function() {
+        debugger;
+        var imgNode = document.createElement('img');
+        imgNode.src = obj.result; //
+        document.getElementById('show').appendChild(imgNode);
+        // result에 base6 인코딩 문자열이 설정
+        console.log(obj.result);
+      }
+      // 이미지 파일을 바이너리 상태로 읽어 드림
+      // 바이너리 형태의 파일 내용을 Data URL 형식으로 변환
+      obj.readAsDataURL(event.target.files[0]);
+    }
+    </script>
+    <!--  -->
+
+    <!-- readAsArrayBuffer -->
+    <!--  -->
+    <div class="">
+      <input type="file" name="name" value="" accept="image/*">
+    </div>
+    <script type="text/javascript">
+    var nodeFile = document.querySelector('input[type=file]');
+    nodeFile.onchange = function(event) {
+      debugger;
+      var fr = new FileReader();
+      // readArrayBuffer()를 완료했을 떄 발생
+      fr.onloadend = function() {
+        debugger;
+        // result에 Blob을 ArrayBuffer로 변환한 결과 설정
+        js.log(fr.result);
+        js.log(fr.result.byteLength);
+        js.log('');
+
+        // 데이터를 표시하기 위해 설명을 숨긴다.
+        // document.getElementById('showJS').style.display = 'none';
+
+        // 앞에서 32바이트 값을 출력
+        var value32 = new Uint8ClampedArray(fr.result, 0, 32); //
+        var value = new Uint8ClampedArray(fr.result); //
+        js.log(value32);
+        js.log(value);
+      }
+      // Blob 파일 to ArrayBuffer
+      fr.readAsArrayBuffer(event.target.files[0]); //
+    }
+
+    </script>
+    <!--  -->
+
+    <!-- blob -->
+    <!--  -->
+    <div class="">
+
+    </div>
+    <script type="text/javascript">
+    window.onload = function() {
+      var blobObj = new Blob(['123abcㄱ나닫']);
+    }
+
+    </script>
+
+    <!-- window.URL.createObjectURL -->
+    <!--  -->
+    <div class="">
+
+    </div>
+    <script type="text/javascript">
+
+    node.onchange = function(event) {
+
+      var file = event.target.files[0];
+
+      var blobURL = window.URL.createObjectURL(file); //
+
+      var imgNode = document.createElement('img');
+      imgNode.src = blobURL;
+      document.getElementById('show').appendChild(imgNode);
+
+      //
+      imgNode.onload = function() {
+        // 생성한 가상 URL을 해제
+        window.URL.revokeObjectURL(file);
+      }
+
+    }
+    </script>
+    <!--  -->
+
+  </body>
+</html>
