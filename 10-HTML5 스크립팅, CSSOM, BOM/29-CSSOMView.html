@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+</head>
+<body>
+
+<!-- MediaQueryList ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		// MediaQueryList 오브젝트 생성. "(orientation:potrait)"
+		var matchObj = window.matchMedia('(max-width: 600px)');
+		// 매치 상대, 미디어 쿼리 출력
+
+		matchObj.matches;
+		matchObj.media;
+		// 이벤트 리스너 설정, 해제(테스트를 위해 주석으로 처리)
+
+		matchObj.addListener(changeMedia);
+
+		// 파라미터에 MediaQueryListener 가 설정됨
+		function changeMedia(eventObj) {
+			eventObj.matches;
+			eventObj.matches ? js.log('일치') : js.log('불일치');
+		}
+	}
+</script>
+<style type="text/css" media=""></style>
+<!-- // -->
+
+<!-- elementsFormPoint ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		window.onclick = function(e) {
+
+			if(document.elementsFromPoint){
+				// e.clientX
+				// e.clientY
+
+				//
+				var nodes = document.elementsFormPoint(e.clientY, e.clientY);
+				
+			}
+		}
+	}
+</script>
+<!-- // -->
+
+<!-- scrollIntoView ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var node = docuemnt.getElementById('showText');
+		var topNode = document.getElementById('alignTop');
+		topNode.addEventListener('click', function() {
+			// true - 위에 표시
+			node.scrollIntoView(true);
+		})
+
+		var bottomNode = document.getElementById('alignBottom');
+		bottomNode.addEventListenr('click', function() {
+			// false - 아래에 표시
+			node.scrollIntoView(false);
+		})
+
+	}
+</script>
+<!-- // -->
+
+<!-- getBoundingClientRect ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var rectObj = docuemnt.getElementById('clientRect').getBoundingClientRect();
+
+		rectObj.top;
+		rectObj.right;
+		rectObj.bottom;
+		rectObj.left;
+
+	}
+</script>
+<!-- // -->
+
+<!--  getClientRects -->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+</body>	
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+	<script type="text/javascript">
+	window.onload = function () {
+		console.log(window.frames);
+		console.log(window[0]);
+		console.log(window[0].top);
+		console.log(window[0].top.innerWidth);
+		console.log(window.frameElement);
+		console.log(window.length);
+		var iframeObj = window[0];
+		console.log(iframeObj.parent);
+		console.log();
+		console.log();
+		console.log();
+		console.log();
+		console.log();
+
+		var a = get('id1');
+		var b = selector('iframe,.class1');
+
+		console.log(a);
+		console.log(b);
+	}
+
+	function get(id) {
+		return document.getElementById(id);
+	}
+
+	function selector(pattern) {
+		return document.querySelector(pattern);
+	}
+
+	function querySelectorAll(pattern) {
+		return document.querySelectorAll(pattern);
+	}
+
+	</script>
+
+</head>
+<body>
+<span id="id1">a</span>
+<span class="class1">b</span>
+<iframe id="iframe0" src="iframeContent.html" frameborder="0" width="230" height="100"></iframe>
+
+<!-- setTimeout -->
+<script type="text/javascript">
+	window.onload = function() {
+		var scopeObj = {
+			value: 100,
+			get: function(param) {
+				this.value = this.value + param + 5;
+				js.log('setTimeout', this.value);
+				window.clearTimeout(window.timerID);
+			}
+		}
+
+		get('scope').onclick = function() {
+			window.timerID = delay(scopeObj.get, scopeObj, 1000, 20);
+			// scopeObj 도 파라미터로 넘겨줌
+		}
+
+		// 핸들러, 스코프, delaytime 순서로 작성
+		// 파라미터에 제한을 두지 않기 위해 arguments 사용
+		function delay(fn, scope, time) {
+			var params = Array.prototype.slice.call(arguments, 3);
+			return setTimeout(function() {
+				// handler 함수
+				// 파라미터의 function; 표현식으로 평가함
+				debugger;
+				return fn.apply(scope || window,params);
+				// aplply; 파라미터를 배열로 넘겨줌. !! this(scope) 참조
+			}, time || 1000)
+		}		
+	}
+</script>
+<button id="scope" type="button">setTimeout() 실행</button>
+<!--  -->
+
+<!-- this -->
+<script type="text/javascript">
+/*
+	obj.get();
+	this -> obj
+
+	obj.get.call(thisArg, );
+	this -> thisArg
+	
+	obj.get.apply(thisArg, );
+	this -> thisArg
+	// apply는 파라미터를 배열로 넘겨줄 수 있음
+*/	
+</script>
+<!--  -->
+
+<!-- setInterval -->
+<script type="text/javascript">
+	window.onload = function() {
+		var scopeObj = {
+			value: 100,
+			get: function(param) {
+				this.value = this.value + param + 5;
+				js.log('setTimeout', this.value);
+				window.clearTimeout(window.timerID);
+			}
+		}
+
+		get('scope').onclick = function() {
+			window.timerID = delay(scopeObj.get, scopeObj, 1000, 20);
+			// scopeObj 도 파라미터로 넘겨줌
+		}
+
+		// 핸들러, 스코프, delaytime 순서로 작성
+		// 파라미터에 제한을 두지 않기 위해 arguments 사용
+		function delay(fn, scope, time) {
+			var params = Array.prototype.slice.call(arguments, 3);
+			return setTimeout(function() {
+				// handler 함수
+				// 파라미터의 function; 표현식으로 평가함
+				debugger;
+				return fn.apply(scope || window,params);
+				// aplply; 파라미터를 배열로 넘겨줌. !! this(scope) 참조
+			}, time || 1000)
+		}		
+	}
+</script>
+<button id="scope" type="button">setInterval() 실행</button>
+<button id="clear" type="button">celarInterval() 실행</button>
+<!--  -->
+
+<!-- 1,2,3~20까지 합 구하기 // setInterval -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		scopeObj = {
+			value: 0,
+			get: function() {
+				if (this.value > 20) {
+					window.clearInterval(intervalID);
+				} else {
+					this.value = this.value + (this.value + 1);
+					js.log(this.value);
+				}
+
+			}
+		}
+
+		get('startInterval').onclick = function() {
+			window.timerID = delay(scopeObj.get, scopeObj, 1000, 20);
+			// scopeObj 도 파라미터로 넘겨줌
+		}
+
+		// 핸들러, 스코프, delaytime 순서로 작성
+		// 파라미터에 제한을 두지 않기 위해 arguments 사용
+		function delay(fn, scope, time) {
+			var params = Array.prototype.slice.call(arguments, 3);
+			return setInterval(function() {
+				// handler 함수
+				// 파라미터의 function; 표현식으로 평가함
+				debugger;
+				return fn.apply(scope || window,params);
+				// aplply; 파라미터를 배열로 넘겨줌. !! this(scope) 참조
+			}, time || 1000)
+		}
+
+	}
+
+</script>
+<button id="startInterval">startInterval</button>
+<!--  -->
+
+<!-- navigator -->
+<script type="text/javascript">
+	window.onload = function() {
+		var obj = window.navigator;
+		console.log(obj.platform);
+		console.log(obj.userAgent);
+		console.log(obj.language);
+		console.log(obj.cookieEnabled);
+	}
+
+</script>
+<!-- // -->
+
+<!-- navigator plugins -->
+<script type="text/javascript">
+	window.onload = function() {
+		var plugins = window.navigator.plugins;
+
+		console.log(plugins.length);
+
+		for (var i = 0; i < plugins.length; i++) {
+			console.log(plugins.item(i).name);
+		};
+	}
+
+</script>
+<!-- // -->
+
+<!-- mimeTypes -->
+<script type="text/javascript">
+	console.log(window.navigator.mimeTypes);
+</script>
+<!-- // -->
+
+
+</body>	
+</html>

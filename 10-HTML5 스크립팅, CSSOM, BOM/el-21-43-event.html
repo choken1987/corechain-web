@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+</head>
+<script type="text/javascript">
+
+window.onload = function() {
+	debugger;
+	//
+	window.addEventListener("resize", function(e){
+		var w = e.target.innerWidth;
+		var h = e.target.innerHeight;
+		var el = document.getElementById("size");
+			el.innerHTML = w + '/' + h;
+	});
+
+	//
+	document.forms[0].addEventListener("submit", function(e){
+		e.preventDefault();
+		var target = [];
+		var el;
+		var val;
+
+		target.push("one");
+		target.push("two");
+
+		for (var i = 0; i < target.length; i++) {
+			el = document.getElementById(target[i])
+			val= el.value;
+			if(val==""){el.focus();return false;}
+		};
+
+	})
+}
+
+//
+var node = document.getElementById
+node.addEvent
+
+
+document.getElementById("dummy").addEventListener('click', function(){
+	var eventObj = document.createEvent("show");
+
+	eventObj.initEvent
+
+	eventObj.myMemo
+
+	node.dispatchEvent(eventObj);
+})
+
+
+
+</script>
+<style type="text/css">
+</style>
+<body>
+<div id="size"></div>
+<form action="">
+	<input type="text" id="one">
+	<input type="text" id="two">
+	<input type="submit" value="전송">
+</form>
+
+</body>	
+</html>

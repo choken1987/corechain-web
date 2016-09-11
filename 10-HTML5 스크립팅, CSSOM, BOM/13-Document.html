@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+</head>
+<body>
+
+<!--  -->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  -->
+<script type="text/javascript">
+	window.onload = function() {
+		
+		var radioList, formNode = document.forms[0];
+		
+		if (formNode.namedItem) {
+			// 
+			radioList = formNode.namedItem('sports');
+			console.log(radioList.length);
+		} else {
+			js.log('namedItem() 미지원');
+		}
+
+		if (radioList.value) {
+
+			js.log(radioList.value);
+
+			radioList.value = '값 변경';
+
+			js.log(radioList.value);
+
+		} else {
+			
+		}
+
+	}
+</script>
+
+<div id="form01">
+	<form action="" id="formSports">
+		<label for=""><input type="radio" name="sports" value="축구">축구</label>
+		<label for=""><input type="radio" name="sports" value="농구" checked="">농구</label>
+		<label for=""><input type="radio" name="sports" value="수영">수영</label>
+	</form>
+
+</div>
+<!-- // -->
+
+<!-- HTMLCollention -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var selectNode = document.getElementById('sports');
+
+		selectNode.length;
+		selectNode.selectedIndex;
+		selectNode.item(1).id;
+
+		if (selectNode.namedItem) {
+			selectNode.namedItem('id12').text('content~~');
+			// textContent
+		} else {
+			alert('미지원');
+		}
+
+	}
+</script>
+<!-- // -->
+
+<!-- HTMLOptionsCollection -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var selectNode 	= document.getElementById('sports');
+		var addNode		= document.getElementById('add');
+		
+		addNode.onclick = function() {
+			var node 		= document.createElement('option');
+			node.textContent = 'ADD';
+			selectNode.add(node, 1);
+		}
+
+
+
+	}
+</script>
+<buttion id="add" type="button" >add</buttion>
+<select name="" id="sports">
+	<option></option>
+</select>
+<!-- // -->
+
+<!-- metadata -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		js.log(document.referrer);
+		js.log(document.cookie);
+		alert('a');
+
+	}
+</script>
+<!-- // -->
+
+<!-- DOM tree peroperty -->
+<!-- // -->
+
+<!-- markup -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		document.getElementById('open').click(function() {
+			document.open();
+			document.write('<h1>hello new document</h1>');
+			document.close();
+		})
+	}
+</script>
+<buttion id="open" type="button">open()</buttion>
+<!-- // -->
+
+
+<!--  -->
+<script type="text/javascript">
+	window.onload = function() {
+		console.log(document.activeElement);
+		console.log(document.hasFocus());
+	}
+</script>
+<!-- // -->
+
+<!--  -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var formNode = document.forms[0];
+
+		console.log(formNode[0].name);
+
+		console.log(formNode['soccer'].type);
+
+		// submit()
+		document.getElementById('submitClick').onclick = function(event) {
+			formNode.submit();
+			console.log('submit() 실행');
+		}
+
+		// reset()
+		document.getElementById('resetClick').onclick = function(event) {
+			formNode.reset();
+			console.log('reset() 실행');
+		}
+
+
+	}
+</script>
+<div id="formDiv">
+	<form>
+	</form>
+</div>
+<!-- // -->
+
+<!-- form -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var node = document.getElementByTagName('label').item(0);
+		console.log(node.htmlFor);
+		console.log(node.control.id);
+		console.log(node.control.type);
+		console.log(node.form.id);
+
+	}
+</script>
+<!-- // -->
+
+<!-- select -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var options = node.options;
+
+		var nodes = node.selectedOptions;
+
+	}
+</script>
+<!-- // -->
+
+<!-- option -->
+<script type="text/javascript">
+	window.onload = function() {
+		var node = document.querySelector('select');
+		document.querySelector('button').onclick = function(event) {
+			var optionNode = new Option('추가', 'add', true, true);
+			node.appendChild(optionNode);
+		}
+	}
+</script>
+<!-- // -->
+
+<!-- textarea -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var node = document.querySelector('textarea');
+		node.readOnly;
+		node.type;
+		node.defaultValue;
+		node.value;
+		node.textLength;
+
+	}
+</script>
+<!-- // -->
+
+<!-- progress -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var rateNode = document.getElementById('rate');
+
+		node.value = Number(node.value) + 10;
+		rateNode.textContent = '진행' + '%';
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  -->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  -->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+
+</body>	
+</html>

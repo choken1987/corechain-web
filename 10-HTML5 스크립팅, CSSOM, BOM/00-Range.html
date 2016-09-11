@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+</head>
+<body>
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!-- range ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		document.getElementById('clickID').onclick = function(event) {
+			// range obejct 
+			// var rangeObj = document.createRange();
+			var rangeObj = new Range();
+			var beginNode = document.getElementById('beginID');
+			var strongNode = document.getElementById('strongID');
+
+			rangeObj.setStart(beginNode.firstChild, 2);
+			rangeObj.setEnd(strongNode.firstChild, 3);
+
+			var fragmentObj = rangeObj.cloneContents();
+			js.log(fragmentObj.textContent);
+		}
+	}
+</script>
+<p><button type="button" id="clickID">문자열 복사 실행</button></p>
+<div id="beginID">가나다라<strong id="strongID">마바사아자차</strong></div>
+<!-- // -->
+
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var rangeObj = new Range();
+		var id02Node = document.getElementById('id02');
+		var id03Node = document.getElementById('id03');
+		rangeObj.setStart(id02Node.firstChild, 3);
+		rangeObj.setStart(id03Node.firstChild, 2);
+
+		js.log(rangeObj.startContainer.textContent);
+
+		rangeObj.endContainer.textContent
+		rangeObj.startOffset
+		rangeObj.endOffset
+		rangeObj.collapsed
+		rangeObj.commonAncestorContainer
+
+		rangeObj.setStartBefore()
+		rangeObj.setEndBefore()
+		rangeObj.setStartAfter()
+		rangeObj.setEndAfter()
+
+		fragmentObj = rangeObj.cloneContents(); // 
+
+	}
+</script>
+<ul id="ULID">ulNode
+	<li id="id01">가나다마</li>
+	<li id="id02">바사아자차</li>
+	<li id="id03">카타파하</li>
+</ul>
+<!-- // -->
+
+<!-- selectNodeContents ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var rangeObj = new Range();
+		var ul00Node = document.getElementById('ul00');
+		
+		// <ul> 은 삭제되지 않고 남는다.
+		document.getElementById('deleteContents').onclick = function(event) {
+			deleteContents('remain');
+		}
+
+		// <ul> 까지 삭제
+		document.getElementById('deleteAll').onclick = function(event) {
+			deleteContents('all');
+		}
+
+		function deleteContents(range){
+			if (range === 'remain') {
+				// 선택 영역만
+				rangeObj.selectNodeContents(ul00Node);
+			} else {
+				// 전부
+				rangeObj.selectNode(ul00Node);
+			}
+
+			rangeObj.deleteContents();
+		}
+
+	}
+</script>
+<p>
+	<button id="deleteContents" type="button">컨텐츠 삭제</button>
+	<button id="deleteAll" type="button">모두 삭제</button>
+</p>
+<ul id="ul00">ulNode
+	<li id="id01">가나다마</li>
+	<li id="id02">바사아자차</li>
+	<li id="id03">카타파하</li>
+</ul>
+<!-- // -->
+
+<!-- cloneContents ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var rangeObj = new Range();
+		rangeObj.setStart(document.getElementById('id01').firstChild, 0);
+		rangeObj.setStart(document.getElementById('id02').firstChild, 2);
+
+		var fragmentObj = rangeObj.cloneContents();
+
+		var node = document.createElement('strong');
+		node.textContent = '추가한 노드';
+
+		document.getElementById('insert').onclick = fucntion(event) {
+			rangeObj.insertNode(node);
+			fragmentObj = rangeObj.cloneContents();
+		}
+	}
+</script>
+<button id="insert" type="button">insertNode()</button>
+<div id="id01">처음
+	<i id="id02">중간</i>
+</div>
+<!-- // -->
+
+<!-- cloneRange, collapse ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var cloneObj = rangeObj.cloneRange();
+
+		rangeObj.collapse(false);
+
+	}
+</script>
+<!-- // -->
+
+<!-- surrondContents ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		// 노드로 감싼다; 텍스트는 영향 없음.
+
+		var newNode = document.createElement('strong');
+
+		newNode.textContent = '추가한 것. 하지만 surrond 할 때 반영 되지 않음. element 만 먹는듯';
+
+		rangeObj.surrondContents(newNode);
+
+
+		var extract = rangeObj.extractContents();
+		extract.textContent;
+
+	}
+</script>
+<!-- // -->
+
+<!-- Constraing validation -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var node = document.querySelector('[name=order]');
+
+		node.setCustomValidity('');
+		// 에러 메시지를 빈 문자열로 지워야 값을 정상으로 입력했을 때
+		// node.checkValidity()에서 true를 반환
+		if(node,checkValidity()) {
+			// 테스르를 위해 폼 전송 막음
+			event.preventDefault();
+		} else {
+			event.preventDefault();
+			node.setCustomValidity('값을 입력하세요.'); // 메시지 변경
+		}
+
+	}
+</script>
+<!-- // -->
+
+<!-- ValidityState -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var inputNode = document.querySelector('input');
+		inputNode.addEventListener('invalid', function(event){
+			event.preventDefault();
+			// inputNode.validity.valueMissing
+			if(inputNode.validity.valueMissing) {
+				console.log('값을 입력 하세요');
+			} 
+		}, false);
+
+		document.querySelector('button').onclick = function(event) {
+			// inputNode.validity
+			for (var name in inputNode.validity) {
+				console.log(inputNode.validity[name]);
+			}
+
+		}
+
+
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+
+
+</body>	
+</html>

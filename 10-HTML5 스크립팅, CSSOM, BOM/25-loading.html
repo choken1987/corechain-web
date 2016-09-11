@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang=ko>
+<head>
+	<!-- <meta charset=“utf-8” /> -->
+	<meta charset="UTF-8" />
+	<title>JavaScript-log</title>
+	<script type="text/javascript" src="log.js"></script>
+</head>
+<body>
+
+<!-- session history ->
+<script type="text/javascript">
+	window.onload = function() {
+
+		var openTitle = document.title;
+		var pageIndex = 0;
+
+		document.querySelector('button').onclick = function(event) {
+			pageIndex++;
+			var eventPass = {
+				page: pageIndex,
+				value: 'value' + pageIndex
+			}
+		}
+		document.title = '페이지' + pageIndex;
+		// history.pushState(state, title, url);
+		window.history.pushState(eventPass, document.title, "?page=" + pageIndex);
+
+		// 이전/다음 버튼을 누를 때마다 실행
+		// window.onpopstate
+		window.onpopstate = function(event){
+			if(event.state){
+				// event.state
+				document.title = "페이지:" + event.state.page; 
+				js.log('state: ' + event.state.value);
+			} else {
+				// 없다면 첫 페이지
+				document.title = openTitle;
+				js.log('state: ' + openTitle);
+			}
+		}
+	}
+</script>
+<div id="history01">
+	<button>execute()</button>
+</div>
+<!-- // -->
+
+<!-- Location -->
+<script type="text/javascript">
+	window.onload = function() {
+
+		
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+<!--  ->
+<script type="text/javascript">
+	window.onload = function() {
+
+
+
+	}
+</script>
+<!-- // -->
+
+
+
+</body>	
+</html>
